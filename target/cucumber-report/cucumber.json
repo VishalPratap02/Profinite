@@ -4,149 +4,151 @@
     "elements": [
       {
         "line": 5,
-        "name": "User should be able to land on Notification Center page",
+        "name": "User should be able to land on Employee Leaves page",
         "description": "",
-        "id": "notification-center;user-should-be-able-to-land-on-notification-center-page",
+        "id": "employee-leave-records;user-should-be-able-to-land-on-employee-leaves-page",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 4614640500,
+              "duration": 6208144000,
               "status": "passed"
             },
             "line": 6,
-            "name": "User Have Logged In Dashboard application",
+            "name": "User have Logged in Dashboard application",
             "match": {
-              "location": "StepDefNotificationCenter.user2_have_logged_in_Dashboard_application()"
+              "location": "StepDefEmployeeLeaves.user_have_logged_in_Dashboard_application()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 2023079600,
+              "duration": 2025663900,
               "status": "passed"
             },
             "line": 7,
-            "name": "Land To Home Page",
+            "name": "Landing to HOME Page",
             "match": {
-              "location": "StepDefNotificationCenter.land_to_HOME_page()"
+              "location": "StepDefEmployeeLeaves.landing_to_HOME_page()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 9432161500,
+              "duration": 7514332600,
               "status": "passed"
             },
             "line": 8,
-            "name": "Click on Notification Center from ADMIN drop down",
+            "name": "Click on Employee Leaves from ADMIN drop down",
             "match": {
-              "location": "StepDefNotificationCenter.click_on_update_leave_balance_from_ADMIN_drop_down()"
+              "location": "StepDefEmployeeLeaves.click_employee_leaves_from_admin()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 2019977400,
+              "duration": 2019873400,
               "status": "passed"
             },
             "line": 9,
-            "name": "User should be able to land on Notification Center page",
+            "name": "User should be able to land on Employee Leaves page",
             "match": {
-              "location": "StepDefNotificationCenter.user_should_be_able_to_land_on_update_leave_balance_page()"
+              "location": "StepDefEmployeeLeaves.user_should_be_able_to_land_on_employee_leaves_page()"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@NotificationCenter"
+            "name": "@EmployeeLeaves"
           }
         ]
       },
       {
-        "line": 11,
-        "name": "User should be able to Approve Attendance in mass from Attendance Notification",
+        "line": 30,
+        "name": "Getting error message if mandatory fields are missing",
         "description": "",
-        "id": "notification-center;user-should-be-able-to-approve-attendance-in-mass-from-attendance-notification",
+        "id": "employee-leave-records;getting-error-message-if-mandatory-fields-are-missing",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 1010574800,
+              "duration": 1011390900,
               "status": "passed"
             },
-            "line": 12,
-            "name": "User landed on Notification Center page",
+            "line": 31,
+            "name": "User landed on Employee Leave page",
             "match": {
-              "location": "StepDefNotificationCenter.user_is_on_update_leave_balance_page()"
+              "location": "StepDefEmployeeLeaves.user_landed_on_Employee_leave_page()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 526334800,
+              "duration": 1353543900,
               "status": "passed"
             },
-            "line": 13,
-            "name": "Select Attendance request",
+            "line": 32,
+            "name": "Click on Apply New Leave button",
             "match": {
-              "location": "StepDefNotificationCenter.select_attendance_request()"
+              "location": "StepDefEmployeeLeaves.click_on_apply_new_leave()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 236215700,
+              "duration": 1316523900,
               "status": "passed"
             },
-            "line": 14,
-            "name": "click on approve button",
+            "line": 33,
+            "name": "Leave mandatory fields blank and click on Apply button",
             "match": {
-              "location": "StepDefNotificationCenter.click_on_approve_button()"
+              "location": "StepDefEmployeeLeaves.leave_mandatory_fields_blank_and_apply()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 20116700,
+              "duration": 76393200,
               "status": "passed"
             },
-            "line": 15,
-            "name": "Approved attendance \u003cString\u003e \u003cString\u003e should not available on notification center anymore",
+            "line": 34,
+            "name": "Error should prevent applying leave flow",
             "match": {
-              "arguments": [
-                {
-                  "val": "\u003cString\u003e",
-                  "offset": 20
-                },
-                {
-                  "val": "\u003cString\u003e ",
-                  "offset": 29
-                }
-              ],
-              "location": "StepDefNotificationCenter.approved_attendance_should_not_available(String,String)"
+              "location": "StepDefEmployeeLeaves.error_should_prevent_applying_leave_flow()"
             },
             "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 742773100,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "Close the browser",
+            "match": {
+              "location": "StepDefEmployeeLeaves.closing_the_browser()"
+            },
+            "keyword": "And "
           }
         ],
         "tags": [
           {
-            "name": "@NotificationCenter"
+            "name": "@EmployeeLeaves"
           }
         ]
       }
     ],
-    "name": "Notification Center",
+    "name": "Employee leave records",
     "description": "",
-    "id": "notification-center",
+    "id": "employee-leave-records",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/Notification%20Center.feature",
+    "uri": "file:src/test/resources/features/Employee%20Leaves.feature",
     "tags": [
       {
-        "name": "@NotificationCenter",
+        "name": "@EmployeeLeaves",
         "type": "Tag",
         "location": {
           "line": 1,

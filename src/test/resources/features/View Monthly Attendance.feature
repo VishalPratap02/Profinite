@@ -13,10 +13,10 @@ Feature: View Monthly Attendance
     And click on View button
     Then Employee monthly attendance record should appear
 
-  #Scenario: User should be able to export employee attendance details to excel sheet
-  #  Given User landed on View Monthly Attendance page
-  #  When Select year and month and click on View button
-  #  And Click on Export to Excel Button
-  #  Then Excel sheet with monthly attendance records should be downloaded in download folder
-  #  And Close The browser
+  Scenario: User should be able to export employee attendance details to excel sheet
+    Given User landed on View Monthly Attendance page
+    When Select year and month and click on View button
+    And Click on Export to Excel Button
+    Then Excel sheet with monthly attendance records should be downloaded in download folder
+    And Close The browser
 

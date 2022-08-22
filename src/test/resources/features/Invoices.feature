@@ -27,7 +27,7 @@ Feature: Invoices
 #    And   Fill mandatory fields and click on submit button
 #    Then  New Invoice should be added successfully
 #
-#  Scenario: Getting error message if mandatory fields are missing
+#  Scenario: Getting error message if mandatory fields are missing while adding new Invoice
 #    Given User landed on Invoice page
 #    When Click on New Invoice button
 #    And Leave mandatory fields blank and click on submit button

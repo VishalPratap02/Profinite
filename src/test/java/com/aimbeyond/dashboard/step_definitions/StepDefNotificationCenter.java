@@ -106,7 +106,7 @@ public class StepDefNotificationCenter {
         String Leave1 = driver.findElement(By.xpath("//*[@id=\"root\"]/div[2]/div/div/div[4]/div[1]/table/tbody/tr[1]/td[1]/span/input")).getText();
     }
 
-    @And("click on Approve button")
+    @And("Click on approve button")
     public void click_on_Approve_button() throws Throwable {
         driver.findElement(By.xpath("//*[@id=\"root\"]/div[2]/div/div/div[4]/div[3]/button[1]")).click();
     }
@@ -130,8 +130,41 @@ public class StepDefNotificationCenter {
 
     @Then("Rejected Leave (.+) (.+) should not available on notification center anymore")
     public void rejected_leave_should_not_available(String Leave1) throws Throwable {
-        String lv1 = driver.findElement(By.xpath("//*[@id=\"root\"]/div[2]/div/div/div[2]/div[1]/table/tbody/tr[1]/td[1]/span/input")).getText();
+        String lv1 = driver.findElement(By.xpath("//*[@id=\"root\"]/div[2]/div/div/div[4]/div[1]/table/tbody/tr[1]/td[1]/span/input")).getText();
         Assert.assertNotEquals(Leave1,lv1);
             }
 
+    @When("Select Policy Request")
+    public void select_policy_request() throws Throwable {
+        driver.findElement(By.xpath("//*[@id=\"root\"]/div[2]/div/div/div[6]/div[1]/table/tbody/tr[1]/td[1]/span/input")).click();
+        String policy1 = driver.findElement(By.xpath("//*[@id=\"root\"]/div[2]/div/div/div[6]/div[1]/table/tbody/tr[1]/td[1]/span/input")).getText();
+    }
+
+    @And("click on approve Button")
+    public void click_on_approv_button() throws Throwable {
+        driver.findElement(By.xpath("//*[@id=\"root\"]/div[2]/div/div/div[6]/div[3]/button[1]")).click();
+    }
+
+    @Then("Approved policy (.+) (.+) should not available on notification center anymore")
+    public void approved_policy_should_not_available(String policy1) throws Throwable {
+        String pl1 = driver.findElement(By.xpath("//*[@id=\"root\"]/div[2]/div/div/div[6]/div[1]/table/tbody/tr[1]/td[1]/span/input")).getText();
+        Assert.assertNotEquals(policy1,pl1);
+    }
+
+    @When("Select Reject Request")
+    public void select_reject_request() throws Throwable {
+        driver.findElement(By.xpath("//*[@id=\"root\"]/div[2]/div/div/div[6]/div[1]/table/tbody/tr[1]/td[1]/span/input")).click();
+        String policy1 = driver.findElement(By.xpath("//*[@id=\"root\"]/div[2]/div/div/div[6]/div[1]/table/tbody/tr[1]/td[1]/span/input")).getText();
+    }
+
+    @And("Click on Reject Button")
+    public void click_on_rejec_button() throws Throwable {
+        driver.findElement(By.xpath("//*[@id=\"root\"]/div[2]/div/div/div[6]/div[3]/button[2]")).click();
+    }
+
+    @Then("Rejected policy (.+) (.+) should not available on notification center anymore")
+    public void rejected_policy_should_not_available(String policy1) throws Throwable {
+        String pl1 = driver.findElement(By.xpath("//*[@id=\"root\"]/div[2]/div/div/div[6]/div[1]/table/tbody/tr[1]/td[1]/span/input")).getText();
+        Assert.assertNotEquals(policy1,pl1);
+    }
 }

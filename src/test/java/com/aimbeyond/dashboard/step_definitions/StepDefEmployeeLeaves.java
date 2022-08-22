@@ -15,7 +15,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class StepDefEmployeeLeaves {
-         WebDriver driver;
+         public static WebDriver driver;
 
     @Given("^User have Logged in Dashboard application$")
     public void user_have_logged_in_Dashboard_application() throws Throwable{
@@ -68,9 +68,6 @@ public class StepDefEmployeeLeaves {
 
     @Given("User landed on Employee Leave page")
     public void user_landed_on_Employee_leave_page() throws Throwable {
-        user_have_logged_in_Dashboard_application();
-        Thread.sleep(1000);
-        click_employee_leaves_from_admin();
         Thread.sleep(1000);
     }
 
@@ -125,17 +122,17 @@ public class StepDefEmployeeLeaves {
     public void fill_mandatory_fields() throws Throwable {
         driver.findElement(By.xpath("/html/body/div[4]/div/div/div[2]/div/div/div[1]/div/div[1]/div/div/div/div/div/div[1]/div[1]")).click();
         Thread.sleep(1000);
-        driver.findElement(By.id("react-select-6-option-0")).click();
+        driver.findElement(By.id("react-select-6-option-1")).click();
         Thread.sleep(1000);
         driver.findElement(By.xpath("/html/body/div[4]/div/div/div[2]/div/div/div[1]/div/div[2]/div/div/div/div/div/div[1]")).click();
         Thread.sleep(1000);
-        driver.findElement(By.id("react-select-7-option-1")).click();
+        driver.findElement(By.id("react-select-7-option-0")).click();
         Thread.sleep(1000);
         driver.findElement(By.xpath("/html/body/div[4]/div/div/div[2]/div/div/div[1]/div/div[3]/div/div/div/div/div[1]/div[1]")).click();
         Thread.sleep(1000);
-        driver.findElement(By.id("react-select-8-option-4")).click();
+        driver.findElement(By.id("react-select-8-option-3")).click();
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//*[@id=\"leave-d\"]")).sendKeys("Doctor appointment schedule");
+        driver.findElement(By.xpath("//*[@id=\"leave-d\"]")).sendKeys("Doctor appointment schedule2");
         Thread.sleep(1000);
         driver.findElement(By.xpath("/html/body/div[4]/div/div/div[2]/div/div/div[2]/div/div/button")).click();
         Thread.sleep(1000);
