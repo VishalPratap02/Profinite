@@ -13,7 +13,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class StepDefViewEmployee {
-    WebDriver driver;
+    public static WebDriver driver;
 
     @Given("^User have logged into Dashboard application$")
     public void user_have_logged_in_Dashboard_application() throws Throwable{
@@ -44,7 +44,7 @@ public class StepDefViewEmployee {
         Thread.sleep(1000);
         driver.findElement(By.xpath("//*[@id=\"navbarText\"]/div/ul/li[8]/a")).click();
         Thread.sleep(1000);
-        WebElement myAccount = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("a[href*='viewEmployee']")));
+        WebElement myAccount = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"navbarText\"]/div/ul/li[8]/ul/li[2]/a")));
         Thread.sleep(1000);
         myAccount.sendKeys(Keys.ENTER);
         Thread.sleep(1000);
@@ -66,9 +66,6 @@ public class StepDefViewEmployee {
 
     @Given("User landed on View Employee page")
     public void user_landed_on_Registration_page() throws Throwable {
-        user_have_logged_in_Dashboard_application();
-        Thread.sleep(1000);
-        click_on_from_ADMIN_drop_down();
         Thread.sleep(1000);
     }
 
@@ -105,7 +102,7 @@ public class StepDefViewEmployee {
 
     @When("Search employee by name")
     public void search_employee_by_name() throws Throwable{
-       driver.findElement(By.name("employeeName")).sendKeys("Rinku");
+       driver.findElement(By.name("employeeName")).sendKeys("Varun");
        Thread.sleep(1000);
        driver.findElement(By.xpath("//button[@class='btn btn-primary btn-lg']")).click();
        Thread.sleep(2000);
@@ -114,6 +111,13 @@ public class StepDefViewEmployee {
     @And("Select the check box to activate or deactivate the employee")
     public void select_check_box_to_activate_employee() throws Throwable{
         driver.findElement(By.xpath("//input[@name='empStatus']")).click();
+    }
+
+    @And("Click on employee name to go to employee profile")
+    public void click_employee_to_go_employee_profile() throws Throwable{
+       //   driver.findElement(By.xpath("//td[text()='184']//following-sibling::td//a")).click();
+        driver.findElement(By.xpath("//*[@id=\"root\"]/div[2]/div/div[2]/table/tbody/tr[1]/td[2]/a")).click();
+        Thread.sleep(1000);
     }
 
     @And("User should be landed to Employee Profile page")
@@ -150,5 +154,24 @@ public class StepDefViewEmployee {
         Thread.sleep(1000);
         Alert a = driver.switchTo().alert();
         System.out.println(a.getText());
+        a.accept();
+        Thread.sleep(1000);
+    }
+
+    @When("Search for an employee")
+    public void search_for_an_employee() throws Throwable{
+        Thread.sleep(500);
+    }
+
+    @Given("User landed on View Employee page again")
+    public void user_landed_on_view_employee_page_again() throws Throwable{
+        WebDriverWait wait = new WebDriverWait(driver,5);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//*[@id=\"navbarText\"]/div/ul/li[8]/a")).click();
+        Thread.sleep(1000);
+        WebElement myAccount = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"navbarText\"]/div/ul/li[8]/ul/li[2]/a")));
+        Thread.sleep(1000);
+        myAccount.sendKeys(Keys.ENTER);
+        Thread.sleep(1000);
     }
 }

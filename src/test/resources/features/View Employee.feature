@@ -7,7 +7,6 @@ Feature: View employee records
     And Land to HOME page
     When Click on View Employee from ADMIN drop down
     Then User should be able to land on View Employee page
-    And Closing  browser
 
   Scenario: User should be able to filter employee records by different fields
     Given User landed on View Employee page
@@ -24,12 +23,12 @@ Feature: View employee records
 
   Scenario: User should be able to view employee profile
     Given User landed on View Employee page
-    When Search employee by name
+    When Search for an employee
     And Click on employee name to go to employee profile
     Then User should be landed to Employee Profile page
 
   Scenario: User should be able to update employee details
-    Given User landed on View Employee page
+    Given User landed on View Employee page again
     When Search employee by name
     And click on Update Details button
     Then User should be landed to Personal Details page

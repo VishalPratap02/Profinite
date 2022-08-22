@@ -16,7 +16,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
 public class StepDefRegistration {
-    WebDriver driver;
+    public static WebDriver driver;
 
     @Given("^User have logged in Dashboard application$")
     public void user_have_logged_in_Dashboard_application() throws Throwable{
@@ -47,7 +47,7 @@ public class StepDefRegistration {
         Actions a = new Actions(driver);
         //a.moveToElement(driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div/nav/div/div/ul/li[7]/a"))).click().perform();
         Thread.sleep(1000);
-        driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div/nav/div/div/ul/li[7]/a")).click();
+        driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div/nav/div/div/ul/li[8]/a")).click();
         Thread.sleep(1000);
         WebElement myAccount = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("a[href*='registration']")));
         Thread.sleep(1000);
@@ -66,17 +66,15 @@ public class StepDefRegistration {
 
     @Given("User landed on Registration page")
     public void user_landed_on_Registration_page() throws Throwable {
-        user_have_logged_in_Dashboard_application();
-        Thread.sleep(1000);
-        click_on_from_ADMIN_drop_down();
+        Thread.sleep(500);
     }
 
     @When("Filling employee details")
     public void filling_employee_details() throws Throwable {
-        driver.findElement(By.id("firstName")).sendKeys("Aamir");
+        driver.findElement(By.id("firstName")).sendKeys("Amar");
         driver.findElement(By.name("lastName")).sendKeys("Singh");
         driver.findElement(By.name("primaryContact")).sendKeys("7101213146");
-        driver.findElement(By.name("employeeCode")).sendKeys("82");
+        driver.findElement(By.name("employeeCode")).sendKeys("83");
         driver.findElement(By.name("source")).sendKeys("Naukri");
         driver.findElement(By.name("aadharNo")).sendKeys("123134545622");
         driver.findElement(By.name("panNo")).sendKeys("BKCQR2004K");
@@ -129,12 +127,5 @@ public class StepDefRegistration {
     public void closing_the_browser() throws Throwable{
         driver.quit();
     }
-
-    @And("Click on employee name to go to employee profile")
-    public void click_employee_to_go_employee_profile() throws Throwable{
-        driver.findElement(By.xpath("//td[text()='184']//following-sibling::td//a")).click();
-        Thread.sleep(1000);
-    }
-
 
 }

@@ -21,16 +21,16 @@ public class StepDefViewAttendance {
 
     @Given("^User have Logged In Dashboard application$")
     public void user_have_logged_in_Dashboard_application() throws Throwable{
-//        System.setProperty("webdriver.gecko.driver","C:\\Users\\Vishal Pratap Singh\\Downloads\\geckodriver-v0.31.0-win64\\geckodriver.exe");
-//        driver = new FirefoxDriver();
-//        driver.get("http://192.168.0.27:5000/");
-//        driver.manage().window().maximize();
-//        driver.manage().deleteAllCookies();
-//        driver.findElement(By.name("username")).sendKeys("ritu.gupta@aimbeyond.com");
-//        driver.findElement(By.name("password")).sendKeys("12345");
-//        Thread.sleep(100);
-//        driver.findElement(By.xpath("//button[@type='submit']")).click();
-//        Thread.sleep(100);
+        System.setProperty("webdriver.gecko.driver","C:\\Users\\Vishal Pratap Singh\\Downloads\\geckodriver-v0.31.0-win64\\geckodriver.exe");
+        driver = new FirefoxDriver();
+        driver.get("http://192.168.0.27:5000/");
+        driver.manage().window().maximize();
+        driver.manage().deleteAllCookies();
+        driver.findElement(By.name("username")).sendKeys("ritu.gupta@aimbeyond.com");
+        driver.findElement(By.name("password")).sendKeys("12345");
+        Thread.sleep(100);
+        driver.findElement(By.xpath("//button[@type='submit']")).click();
+        Thread.sleep(100);
     }
 
     @And("^Landing To HOME Page$")

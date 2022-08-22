@@ -7,14 +7,12 @@ Feature: Registration Dashboard
     And   Landing to HOME page
     When  Click on Registration from ADMIN drop down
     Then  User should be able to land on Registration page
-    And   Closing browser
 
-  Scenario: User should be able to register new employee
-    Given User landed on Registration page
-    When  Filling employee details
-    And   Click on REGISTER NOW: NEW EMPLOYEE button
-    Then  Registration should be completed successfully
-    And   Closing browser
+#  Scenario: User should be able to register new employee
+#    Given User landed on Registration page
+#    When  Filling employee details
+#    And   Click on REGISTER NOW: NEW EMPLOYEE button
+#    Then  Registration should be completed successfully
 
   Scenario: Getting error message if mandatory fields are missing
     Given User landed on Registration page
