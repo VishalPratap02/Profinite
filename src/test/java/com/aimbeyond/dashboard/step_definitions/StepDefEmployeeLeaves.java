@@ -1,5 +1,6 @@
 package com.aimbeyond.dashboard.step_definitions;
 
+import com.github.javafaker.Faker;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -108,7 +109,7 @@ public class StepDefEmployeeLeaves {
     public void click_on_action() throws Throwable {
         driver.findElement(By.xpath("//*[@id=\"root\"]/div[2]/div/div/div[2]/table/tbody/tr/td[7]/span/img")).click();
         Thread.sleep(1000);
-        driver.findElement(By.xpath("/html/body/div[4]/div/div/div[2]/div/div/div[2]/div/div[3]/button")).click();
+        driver.findElement(By.xpath("/html/body/div[4]/div/div/div[2]/div/div/div[2]/div/div[5]/button")).click();
         Thread.sleep(1000);
     }
 
@@ -120,19 +121,20 @@ public class StepDefEmployeeLeaves {
 
     @And("Fill mandatory fields and click on apply button")
     public void fill_mandatory_fields() throws Throwable {
+        Faker faker = new Faker();
         driver.findElement(By.xpath("/html/body/div[4]/div/div/div[2]/div/div/div[1]/div/div[1]/div/div/div/div/div/div[1]/div[1]")).click();
         Thread.sleep(1000);
-        driver.findElement(By.id("react-select-6-option-1")).click();
+        driver.findElement(By.id("react-select-10-option-0")).click();
         Thread.sleep(1000);
         driver.findElement(By.xpath("/html/body/div[4]/div/div/div[2]/div/div/div[1]/div/div[2]/div/div/div/div/div/div[1]")).click();
         Thread.sleep(1000);
-        driver.findElement(By.id("react-select-7-option-0")).click();
+        driver.findElement(By.id("react-select-11-option-1")).click();
         Thread.sleep(1000);
         driver.findElement(By.xpath("/html/body/div[4]/div/div/div[2]/div/div/div[1]/div/div[3]/div/div/div/div/div[1]/div[1]")).click();
         Thread.sleep(1000);
-        driver.findElement(By.id("react-select-8-option-3")).click();
+        driver.findElement(By.id("react-select-12-option-3")).click();
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//*[@id=\"leave-d\"]")).sendKeys("Doctor appointment schedule2");
+        driver.findElement(By.xpath("//*[@id=\"leave-d\"]")).sendKeys(faker.medical().diseaseName());
         Thread.sleep(1000);
         driver.findElement(By.xpath("/html/body/div[4]/div/div/div[2]/div/div/div[2]/div/div/button")).click();
         Thread.sleep(1000);

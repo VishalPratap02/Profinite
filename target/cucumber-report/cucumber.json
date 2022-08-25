@@ -1,281 +1,355 @@
 [
   {
-    "line": 2,
+    "line": 3,
     "elements": [
       {
-        "line": 4,
-        "name": "User should be able to land on album page",
+        "line": 5,
+        "name": "User should be able to land on Employee Leaves page",
         "description": "",
-        "id": "view-or-add-album;user-should-be-able-to-land-on-album-page",
+        "id": "employee-leave-records;user-should-be-able-to-land-on-employee-leaves-page",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 6099251600,
+              "duration": 4582944200,
               "status": "passed"
             },
-            "line": 5,
-            "name": "User have Logged into Dashboard application",
+            "line": 6,
+            "name": "User have Logged in Dashboard application",
             "match": {
-              "location": "StepDefAlbum.user_have_logged_in_Dashboard_application()"
+              "location": "StepDefEmployeeLeaves.user_have_logged_in_Dashboard_application()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 2026350800,
+              "duration": 2034722700,
               "status": "passed"
             },
-            "line": 6,
-            "name": "Landing To HOME page",
+            "line": 7,
+            "name": "Landing to HOME Page",
             "match": {
-              "location": "StepDefAlbum.landing_to_HOME_page()"
+              "location": "StepDefEmployeeLeaves.landing_to_HOME_page()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 7518492100,
+              "duration": 7605268400,
               "status": "passed"
             },
-            "line": 7,
-            "name": "Click on Album from ADMIN drop down",
+            "line": 8,
+            "name": "Click on Employee Leaves from ADMIN drop down",
             "match": {
-              "location": "StepDefAlbum.click_on_Album_from_ADMIN_drop_down()"
+              "location": "StepDefEmployeeLeaves.click_employee_leaves_from_admin()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 2024537200,
+              "duration": 2020704300,
               "status": "passed"
             },
-            "line": 8,
-            "name": "User should be able to land on Album page",
+            "line": 9,
+            "name": "User should be able to land on Employee Leaves page",
             "match": {
-              "location": "StepDefAlbum.user_should_be_able_to_land_on_album_page()"
+              "location": "StepDefEmployeeLeaves.user_should_be_able_to_land_on_employee_leaves_page()"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@Album"
+            "name": "@EmployeeLeaves"
           }
         ]
       },
       {
-        "line": 10,
-        "name": "User should be able to add an album",
+        "line": 11,
+        "name": "User should be able to filter employee leave records by different fields",
         "description": "",
-        "id": "view-or-add-album;user-should-be-able-to-add-an-album",
+        "id": "employee-leave-records;user-should-be-able-to-filter-employee-leave-records-by-different-fields",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 901500,
+              "duration": 1010153800,
               "status": "passed"
             },
-            "line": 11,
-            "name": "User is on Album page",
+            "line": 12,
+            "name": "User landed on Employee Leave page",
             "match": {
-              "location": "StepDefAlbum.user_is_on_album_page()"
+              "location": "StepDefEmployeeLeaves.user_landed_on_Employee_leave_page()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 4803803400,
+              "duration": 2669506500,
               "status": "passed"
             },
-            "line": 12,
-            "name": "Click on NEW ALBUM button and fill the mandatory fields",
+            "line": 13,
+            "name": "Select leave type as Paid Time Off",
             "match": {
-              "location": "StepDefAlbum.click_on_new_album_button_and_fill_the_mandatory_fields()"
+              "location": "StepDefEmployeeLeaves.select_leave_type_as_paid_off()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 253165800,
-              "status": "passed"
-            },
-            "line": 13,
-            "name": "Click on UPLOAD NOW button",
-            "match": {
-              "location": "StepDefAlbum.click_on_upload_now_button()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 2363427000,
+              "duration": 327607300,
               "status": "passed"
             },
             "line": 14,
-            "name": "Album should created successfully",
+            "name": "click on Search button",
             "match": {
-              "location": "StepDefAlbum.album_should_created_successfully()"
+              "location": "StepDefEmployeeLeaves.click_on_search_button()"
             },
-            "keyword": "Then "
+            "keyword": "And "
           },
           {
             "result": {
-              "duration": 1029919000,
+              "duration": 394542200,
               "status": "passed"
             },
             "line": 15,
-            "name": "Metadata should match with the values provided",
+            "name": "Only Paid time off leave type should appear",
             "match": {
-              "location": "StepDefAlbum.metadata_should_match_with_the_values_provided()"
+              "location": "StepDefEmployeeLeaves.only_paid_time_off_leave_type_should_appear()"
             },
-            "keyword": "And "
+            "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@Album"
+            "name": "@EmployeeLeaves"
           }
         ]
       },
       {
         "line": 17,
-        "name": "Getting error message if mandatory fields are missing",
+        "name": "User should be able to approve \u0027awaiting approval\u0027 leaves",
         "description": "",
-        "id": "view-or-add-album;getting-error-message-if-mandatory-fields-are-missing",
+        "id": "employee-leave-records;user-should-be-able-to-approve--awaiting-approval--leaves",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 375200,
+              "duration": 1007406900,
               "status": "passed"
             },
             "line": 18,
-            "name": "User is on Album page",
+            "name": "User landed on Employee Leave page",
             "match": {
-              "location": "StepDefAlbum.user_is_on_album_page()"
+              "location": "StepDefEmployeeLeaves.user_landed_on_Employee_leave_page()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 1259460700,
+              "duration": 2624352800,
               "status": "passed"
             },
             "line": 19,
-            "name": "Click on NEW ALBUM button and leave mandatory fields",
+            "name": "Select awaiting approval leave status",
             "match": {
-              "location": "StepDefAlbum.click_on_new_album_button_and_leave_mandatory_fields()"
+              "location": "StepDefEmployeeLeaves.select_awaiting_approval_leave_status()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 316854300,
+              "duration": 318167600,
               "status": "passed"
             },
             "line": 20,
-            "name": "Click on UPLOAD NOW button",
+            "name": "click on Search button",
             "match": {
-              "location": "StepDefAlbum.click_on_upload_now_button()"
+              "location": "StepDefEmployeeLeaves.click_on_search_button()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 339714800,
+              "duration": 2580752200,
               "status": "passed"
             },
             "line": 21,
-            "name": "Error should prevent creating new album flow",
+            "name": "Click on action and approved button",
             "match": {
-              "location": "StepDefAlbum.error_should_prevent_creating_new_album_flow()"
+              "location": "StepDefEmployeeLeaves.click_on_action()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 326746700,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "Leave status should be updated accordingly",
+            "match": {
+              "location": "StepDefEmployeeLeaves.leave_status_should_be_updated_accordingly()"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@Album"
+            "name": "@EmployeeLeaves"
           }
         ]
       },
       {
-        "line": 23,
-        "name": "User should be able to edit album images",
+        "line": 24,
+        "name": "User should be able to apply new leave",
         "description": "",
-        "id": "view-or-add-album;user-should-be-able-to-edit-album-images",
+        "id": "employee-leave-records;user-should-be-able-to-apply-new-leave",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 548500,
+              "duration": 1013638500,
               "status": "passed"
             },
-            "line": 24,
-            "name": "User is on Album page",
+            "line": 25,
+            "name": "User landed on Employee Leave page",
             "match": {
-              "location": "StepDefAlbum.user_is_on_album_page()"
+              "location": "StepDefEmployeeLeaves.user_landed_on_Employee_leave_page()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 1283781400,
+              "duration": 1346272000,
               "status": "passed"
             },
-            "line": 25,
-            "name": "Click on a particular album",
+            "line": 26,
+            "name": "Click on Apply New Leave button",
             "match": {
-              "location": "StepDefAlbum.click_on_a_particular_album()"
+              "location": "StepDefEmployeeLeaves.click_on_apply_new_leave()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 2021192500,
+              "duration": 10763705800,
               "status": "passed"
             },
-            "line": 26,
-            "name": "User should be able to land on editAlbumImages page",
+            "line": 27,
+            "name": "Fill mandatory fields and click on apply button",
             "match": {
-              "location": "StepDefAlbum.user_land_on_edit_album_images_page()"
+              "location": "StepDefEmployeeLeaves.fill_mandatory_fields()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 319683200,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "New leave should be applied successfully",
+            "match": {
+              "location": "StepDefEmployeeLeaves.new_leave_should_be_applied_successfully()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@EmployeeLeaves"
+          }
+        ]
+      },
+      {
+        "line": 30,
+        "name": "Getting error message if mandatory fields are missing",
+        "description": "",
+        "id": "employee-leave-records;getting-error-message-if-mandatory-fields-are-missing",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1008803700,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "User landed on Employee Leave page",
+            "match": {
+              "location": "StepDefEmployeeLeaves.user_landed_on_Employee_leave_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1390251300,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "Click on Apply New Leave button",
+            "match": {
+              "location": "StepDefEmployeeLeaves.click_on_apply_new_leave()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1310338500,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "Leave mandatory fields blank and click on Apply button",
+            "match": {
+              "location": "StepDefEmployeeLeaves.leave_mandatory_fields_blank_and_apply()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 84799500,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "Error should prevent applying leave flow",
+            "match": {
+              "location": "StepDefEmployeeLeaves.error_should_prevent_applying_leave_flow()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "error_message": "org.openqa.selenium.WebDriverException: Timed out waiting for driver server to stop.\nBuild info: version: \u00274.1.1\u0027, revision: \u0027e8fcc2cecf\u0027\nSystem info: host: \u0027DESKTOP-D9NGSTG\u0027, ip: \u0027192.168.0.108\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002717.0.1\u0027\nDriver info: org.openqa.selenium.firefox.FirefoxDriver\nCommand: [c45c519d-7290-444b-b1f4-5e18a152837e, quit {}]\nCapabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 101.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20220608170832, moz:debuggerAddress: localhost:63977, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:processID: 13196, moz:profile: C:\\Users\\VISHAL~1\\AppData\\L..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), se:cdp: ws://localhost:63977/devtoo..., se:cdpVersion: 85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: c45c519d-7290-444b-b1f4-5e18a152837e\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:132)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:598)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:439)\r\n\tat com.aimbeyond.dashboard.step_definitions.StepDefAlbum.closing_the_browser(StepDefAlbum.java:155)\r\n\tat ✽.Close The Browser(file:src/test/resources/features/Album.feature:27)\r\nCaused by: java.util.concurrent.ExecutionException: org.openqa.selenium.TimeoutException: Process timed out after waiting for 20000 ms.\nBuild info: version: \u00274.1.1\u0027, revision: \u0027e8fcc2cecf\u0027\nSystem info: host: \u0027DESKTOP-D9NGSTG\u0027, ip: \u0027192.168.0.108\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002717.0.1\u0027\nDriver info: driver.version: unknown\r\n\tat java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)\r\n\tat java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:128)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:598)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:439)\r\n\tat com.aimbeyond.dashboard.step_definitions.StepDefAlbum.closing_the_browser(StepDefAlbum.java:155)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:568)\r\n\tat cucumber.runtime.Utils$1.call(Utils.java:26)\r\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\r\n\tat cucumber.runtime.Utils.invoke(Utils.java:20)\r\n\tat cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:57)\r\n\tat cucumber.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:50)\r\n\tat cucumber.runner.TestStep.executeStep(TestStep.java:63)\r\n\tat cucumber.runner.TestStep.run(TestStep.java:49)\r\n\tat cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:43)\r\n\tat cucumber.runner.TestCase.run(TestCase.java:45)\r\n\tat cucumber.runner.Runner.runPickle(Runner.java:40)\r\n\tat cucumber.runtime.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:146)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:68)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:23)\r\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\r\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\r\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\r\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:73)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:122)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:64)\r\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\r\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\r\n\tat cucumber.api.junit.Cucumber$1.evaluate(Cucumber.java:131)\r\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\r\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\r\n\tat com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)\r\n\tat com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)\r\n\tat com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)\r\n\tat com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)\r\n\tat com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)\r\n\tat com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)\r\nCaused by: org.openqa.selenium.TimeoutException: Process timed out after waiting for 20000 ms.\nBuild info: version: \u00274.1.1\u0027, revision: \u0027e8fcc2cecf\u0027\nSystem info: host: \u0027DESKTOP-D9NGSTG\u0027, ip: \u0027192.168.0.108\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002717.0.1\u0027\nDriver info: driver.version: unknown\r\n\tat org.openqa.selenium.os.OsProcess.waitFor(OsProcess.java:174)\r\n\tat org.openqa.selenium.os.CommandLine.waitFor(CommandLine.java:127)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.lambda$execute$2(DriverCommandExecutor.java:122)\r\n\tat java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)\r\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)\r\n\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)\r\n\tat java.base/java.lang.Thread.run(Thread.java:833)\r\n",
-              "duration": 25101185600,
-              "status": "failed"
+              "duration": 729736100,
+              "status": "passed"
             },
-            "line": 27,
-            "name": "Close The Browser",
+            "line": 35,
+            "name": "Close the browser",
             "match": {
-              "location": "StepDefAlbum.closing_the_browser()"
+              "location": "StepDefEmployeeLeaves.closing_the_browser()"
             },
             "keyword": "And "
           }
         ],
         "tags": [
           {
-            "name": "@Album"
+            "name": "@EmployeeLeaves"
           }
         ]
       }
     ],
-    "name": "View or Add album",
+    "name": "Employee leave records",
     "description": "",
-    "id": "view-or-add-album",
+    "id": "employee-leave-records",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/Album.feature",
+    "uri": "file:src/test/resources/features/Employee%20Leaves.feature",
     "tags": [
       {
-        "name": "@Album",
+        "name": "@EmployeeLeaves",
         "type": "Tag",
         "location": {
           "line": 1,
