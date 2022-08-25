@@ -1,5 +1,6 @@
 package com.aimbeyond.dashboard.step_definitions;
 
+import com.github.javafaker.Faker;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -72,9 +73,10 @@ public class StepDefAlbum {
 
     @When("Click on NEW ALBUM button and fill the mandatory fields")
     public void click_on_new_album_button_and_fill_the_mandatory_fields() throws Throwable{
+        Faker faker = new Faker();
             driver.findElement(By.xpath("//*[@id=\"root\"]/div[2]/div/div[1]/div/div/div/div/a/i")).click();
             Thread.sleep(1000);
-            driver.findElement(By.name("albumName")).sendKeys("Testing18");
+            driver.findElement(By.name("albumName")).sendKeys(faker.book().title());
             driver.findElement(By.xpath("/html/body/div[4]/div/div/div[2]/div/div/div[1]/div/div[2]/div/div/div/div/div/div[1]")).click();
             driver.findElement(By.id("react-select-2-option-3")).click();
             Thread.sleep(1000);
@@ -145,6 +147,7 @@ public class StepDefAlbum {
         String url = driver.getCurrentUrl();
         System.out.println("Page url is "+url);
         Assert.assertEquals("http://192.168.0.27:5000/dashboard/editAlbumImages",url);
+        Thread.sleep(1000);
     }
 
     @And("^Close The Browser$")
