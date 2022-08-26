@@ -71,12 +71,12 @@ public class StepDefAlbum {
             System.out.println("User is on Album page");
     }
 
-    @When("Click on NEW ALBUM button and fill the mandatory fields")
-    public void click_on_new_album_button_and_fill_the_mandatory_fields() throws Throwable{
-        Faker faker = new Faker();
+    @When("Click on NEW ALBUM button and fill the mandatory fields including \\\"(.*)\\\"")
+    public void click_on_new_album_button_and_fill_the_mandatory_fields(String albumname) throws Throwable{
+       // Faker faker = new Faker();
             driver.findElement(By.xpath("//*[@id=\"root\"]/div[2]/div/div[1]/div/div/div/div/a/i")).click();
             Thread.sleep(1000);
-            driver.findElement(By.name("albumName")).sendKeys(faker.book().title());
+            driver.findElement(By.name("albumName")).sendKeys(albumname);
             driver.findElement(By.xpath("/html/body/div[4]/div/div/div[2]/div/div/div[1]/div/div[2]/div/div/div/div/div/div[1]")).click();
             driver.findElement(By.id("react-select-2-option-3")).click();
             Thread.sleep(1000);

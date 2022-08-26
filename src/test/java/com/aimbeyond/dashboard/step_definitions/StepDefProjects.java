@@ -69,9 +69,9 @@ public class StepDefProjects {
     public void click_on_new_project_button_and_fill_the_mandatory_fields() throws Throwable{
         driver.findElement(By.xpath("//*[@id=\"root\"]/div[2]/div/div[1]/div/div/div/div/a")).click();
         Thread.sleep(1000);
-        driver.findElement(By.name("projectName")).sendKeys("Automation Testing6");
+        driver.findElement(By.xpath("/html/body/div[4]/div/div/div[2]/div/div/div[1]/div[1]/input")).sendKeys("Automation Testing10");
         driver.findElement(By.xpath("/html/body/div[4]/div/div/div[2]/div/div/div[1]/div[2]/div/div/div/div[1]")).click();
-        driver.findElement(By.id("react-select-2-option-0")).click();
+        driver.findElement(By.id("react-select-5-option-0")).click();
         Thread.sleep(1000);
         driver.findElement(By.name("actualEndDate")).click();
         driver.findElement(By.xpath("/html/body/div[4]/div/div/div[2]/div/div/div[1]/div[4]/div/div/div[2]/div[2]/div/div/div[2]/div[1]/div[2]/div[2]/div/span[1]")).click();
@@ -79,10 +79,10 @@ public class StepDefProjects {
         driver.findElement(By.xpath("/html/body/div[4]/div/div/div[2]/div/div/div[1]/div[4]/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[4]/div[5]")).click();
         Thread.sleep(1000);
         driver.findElement(By.xpath("/html/body/div[4]/div/div/div[2]/div/div/div[1]/div[5]/div/div/div/div[1]")).click();
-        driver.findElement(By.id("react-select-3-option-5")).click();
+        driver.findElement(By.id("react-select-6-option-5")).click();
         driver.findElement(By.xpath("/html/body/div[4]/div/div/div[2]/div/div/div[1]/div[6]/div/div/div/div[1]/div[1]")).click();
-        driver.findElement(By.id("react-select-4-option-6")).click();
-        driver.findElement(By.name("projectDesc")).sendKeys("Automation Testing Project6");
+        driver.findElement(By.id("react-select-7-option-6")).click();
+        driver.findElement(By.name("projectDesc")).sendKeys("Automation Testing Project10");
     }
 
     @And("Click on SAVE button")
@@ -113,9 +113,6 @@ public class StepDefProjects {
         String name =driver.findElement(By.xpath("/html/body/div[4]/div/div/div[2]/div/div/div[1]/div[1]/span/div")).getText();
         System.out.println("Project status - "+name);
         Assert.assertEquals("The project name field is required.",name);
-        String status =driver.findElement(By.xpath("/html/body/div[4]/div/div/div[2]/div/div/div[1]/div[2]/span/div")).getText();
-        System.out.println("Project status - "+status);
-        Assert.assertEquals("The project status field is required.",status);
         String pm =driver.findElement(By.xpath("/html/body/div[4]/div/div/div[2]/div/div/div[1]/div[5]/span/div")).getText();
         System.out.println("Project status - "+pm);
         Assert.assertEquals("The project manager field is required.",pm);
@@ -197,7 +194,7 @@ public class StepDefProjects {
         Thread.sleep(1000);
         driver.findElement(By.xpath("/html/body/div[4]/div/div/div[2]/div/div/div[1]/div[1]/div/div/div/div[1]/div[1]/div[1]")).click();
         Thread.sleep(1500);
-        driver.findElement(By.id("react-select-5-option-1")).click();
+        driver.findElement(By.id("react-select-17-option-1")).click();
         Thread.sleep(1500);
         // driver.findElement(By.xpath("/html/body/div[4]/div/div/div[2]/div/div/div[1]/div[1]/div/div/div/div[1]/div[1]/div[1]")).sendKeys(Keys.TAB);
 //        driver.findElement(By.xpath("/html/body/div[4]/div/div/div[2]/div/div/div[1]/div[2]/div/div/div/div[1]/div[1]/div[1]")).click();
@@ -208,7 +205,7 @@ public class StepDefProjects {
 //        driver.findElement(By.id("react-select-7-option-0")).click();
 //        Thread.sleep(1000);
         driver.findElement(By.xpath("/html/body/div[4]/div/div/div[2]/div/div/div[1]/div[4]/div/div/div/div[1]/div[1]")).click();
-        driver.findElement(By.id("react-select-8-option-1")).click();
+        driver.findElement(By.id("react-select-20-option-1")).click();
         Thread.sleep(1000);
     }
 
