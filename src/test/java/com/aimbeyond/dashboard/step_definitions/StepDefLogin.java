@@ -2,6 +2,7 @@ package com.aimbeyond.dashboard.step_definitions;
 
 import com.aimbeyond.dashboard.pages.loginPage;
 //import com.aimbeyond.dashboard.utilities.Hooks;
+import com.aimbeyond.dashboard.utilities.Hooks;
 import cucumber.api.HookTestStep;
 import cucumber.api.java.After;
 import cucumber.api.java.en.And;
@@ -19,15 +20,16 @@ import java.util.concurrent.TimeUnit;
 public class StepDefLogin {
      public static WebDriver driver;
      loginPage login;
+     Hooks hooks;
 
-    @Before
-    public void browser_setup() throws Throwable {
-        System.setProperty("webdriver.gecko.driver", "C:\\Users\\Vishal Pratap Singh\\Downloads\\geckodriver-v0.31.0-win64\\geckodriver.exe");
-        driver = new FirefoxDriver();
-        driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        driver.manage().window().maximize();
-    }
+//    @Before
+//    public void browser_setup() throws Throwable {
+//        System.setProperty("webdriver.gecko.driver", "C:\\Users\\Vishal Pratap Singh\\Downloads\\geckodriver-v0.31.0-win64\\geckodriver.exe");
+//        driver = new FirefoxDriver();
+//        driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
+//        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+//        driver.manage().window().maximize();
+//    }
 
 @After
     public void teardown() throws Throwable {
@@ -35,6 +37,7 @@ public class StepDefLogin {
 }
     @Given("^Open browser and start application$")
     public void Open_browser_and_start_application() throws Throwable {
+    hooks = new Hooks(driver);
         driver.get("http://192.168.0.27:5000/");
     }
 

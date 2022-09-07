@@ -8,8 +8,6 @@ Feature: Login Dashboard
     And   Click on login button
     Then  User should be able to logging successfully
     Examples:
-    | username                 | | password |
-    | ritu.gupta@aimbeyond.com | | 12345 |
-    | dashboard@aimbeyond.com  | | 12345 |
-
-
+      | username                 | | password |
+      | ritu.gupta@aimbeyond.com | | 12345 |
+      | dashboard@aimbeyond.com  | | 12345 |
