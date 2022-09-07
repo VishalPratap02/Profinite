@@ -1,282 +1,171 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/Employee%20Leaves.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/Login.feature");
 formatter.feature({
-  "name": "Employee leave records",
+  "name": "Login Dashboard",
   "description": "",
   "keyword": "Feature",
   "tags": [
     {
-      "name": "@EmployeeLeaves"
+      "name": "@login"
+    }
+  ]
+});
+formatter.scenarioOutline({
+  "name": "By login dashboard user should be able to land on Home page",
+  "description": "",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "name": "Open browser and start application",
+  "keyword": "Given "
+});
+formatter.step({
+  "name": "Enter valid \u003cusername\u003e and \u003cpassword\u003e",
+  "keyword": "When "
+});
+formatter.step({
+  "name": "Click on login button",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "User should be able to logging successfully",
+  "keyword": "Then "
+});
+formatter.examples({
+  "name": "",
+  "description": "",
+  "keyword": "Examples",
+  "rows": [
+    {
+      "cells": [
+        "username",
+        "",
+        "password"
+      ]
+    },
+    {
+      "cells": [
+        "ritu.gupta@aimbeyond.com",
+        "",
+        "12345"
+      ]
+    },
+    {
+      "cells": [
+        "dashboard@aimbeyond.com",
+        "",
+        "12345"
+      ]
     }
   ]
 });
 formatter.scenario({
-  "name": "User should be able to land on Employee Leaves page",
+  "name": "By login dashboard user should be able to land on Home page",
   "description": "",
-  "keyword": "Scenario",
+  "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@EmployeeLeaves"
+      "name": "@login"
     }
   ]
 });
 formatter.step({
-  "name": "User have Logged in Dashboard application",
+  "name": "Open browser and start application",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "StepDefEmployeeLeaves.user_have_logged_in_Dashboard_application()"
+  "location": "StepDefLogin.Open_browser_and_start_application()"
 });
 formatter.result({
-  "status": "passed"
+  "error_message": "java.lang.NullPointerException: Cannot invoke \"org.openqa.selenium.WebDriver.get(String)\" because \"com.aimbeyond.dashboard.step_definitions.StepDefLogin.driver\" is null\r\n\tat com.aimbeyond.dashboard.step_definitions.StepDefLogin.Open_browser_and_start_application(StepDefLogin.java:38)\r\n\tat ✽.Open browser and start application(file:src/test/resources/features/Login.feature:6)\r\n",
+  "status": "failed"
 });
 formatter.step({
-  "name": "Landing to HOME Page",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "StepDefEmployeeLeaves.landing_to_HOME_page()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Click on Employee Leaves from ADMIN drop down",
+  "name": "Enter valid ritu.gupta@aimbeyond.com and 12345",
   "keyword": "When "
 });
 formatter.match({
-  "location": "StepDefEmployeeLeaves.click_employee_leaves_from_admin()"
+  "location": "StepDefLogin.Enter_valid_username_and_password(String,String)"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
-  "name": "User should be able to land on Employee Leaves page",
+  "name": "Click on login button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "StepDefLogin.Click_on_login_button()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "User should be able to logging successfully",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "StepDefEmployeeLeaves.user_should_be_able_to_land_on_employee_leaves_page()"
+  "location": "StepDefLogin.User_should_be_able_to_logging_successfully()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
+});
+formatter.after({
+  "error_message": "java.lang.NullPointerException: Cannot invoke \"org.openqa.selenium.WebDriver.quit()\" because \"com.aimbeyond.dashboard.step_definitions.StepDefLogin.driver\" is null\r\n\tat com.aimbeyond.dashboard.step_definitions.StepDefLogin.teardown(StepDefLogin.java:34)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:568)\r\n\tat cucumber.runtime.Utils$1.call(Utils.java:26)\r\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\r\n\tat cucumber.runtime.Utils.invoke(Utils.java:20)\r\n\tat cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)\r\n\tat cucumber.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:16)\r\n\tat cucumber.runner.TestStep.executeStep(TestStep.java:63)\r\n\tat cucumber.runner.TestStep.run(TestStep.java:49)\r\n\tat cucumber.runner.TestCase.run(TestCase.java:49)\r\n\tat cucumber.runner.Runner.runPickle(Runner.java:40)\r\n\tat cucumber.runtime.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:146)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:68)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:23)\r\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\r\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\r\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\r\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:73)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:122)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:64)\r\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\r\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\r\n\tat cucumber.api.junit.Cucumber$1.evaluate(Cucumber.java:131)\r\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\r\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\r\n\tat com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)\r\n\tat com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)\r\n\tat com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)\r\n\tat com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)\r\n\tat com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)\r\n\tat com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)\r\n",
+  "status": "failed"
 });
 formatter.scenario({
-  "name": "User should be able to filter employee leave records by different fields",
+  "name": "By login dashboard user should be able to land on Home page",
   "description": "",
-  "keyword": "Scenario",
+  "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@EmployeeLeaves"
+      "name": "@login"
     }
   ]
 });
 formatter.step({
-  "name": "User landed on Employee Leave page",
+  "name": "Open browser and start application",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "StepDefEmployeeLeaves.user_landed_on_Employee_leave_page()"
+  "location": "StepDefLogin.Open_browser_and_start_application()"
 });
 formatter.result({
-  "status": "passed"
+  "error_message": "java.lang.NullPointerException: Cannot invoke \"org.openqa.selenium.WebDriver.get(String)\" because \"com.aimbeyond.dashboard.step_definitions.StepDefLogin.driver\" is null\r\n\tat com.aimbeyond.dashboard.step_definitions.StepDefLogin.Open_browser_and_start_application(StepDefLogin.java:38)\r\n\tat ✽.Open browser and start application(file:src/test/resources/features/Login.feature:6)\r\n",
+  "status": "failed"
 });
 formatter.step({
-  "name": "Select leave type as Paid Time Off",
+  "name": "Enter valid dashboard@aimbeyond.com and 12345",
   "keyword": "When "
 });
 formatter.match({
-  "location": "StepDefEmployeeLeaves.select_leave_type_as_paid_off()"
+  "location": "StepDefLogin.Enter_valid_username_and_password(String,String)"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
-  "name": "click on Search button",
+  "name": "Click on login button",
   "keyword": "And "
 });
 formatter.match({
-  "location": "StepDefEmployeeLeaves.click_on_search_button()"
+  "location": "StepDefLogin.Click_on_login_button()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
-  "name": "Only Paid time off leave type should appear",
+  "name": "User should be able to logging successfully",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "StepDefEmployeeLeaves.only_paid_time_off_leave_type_should_appear()"
+  "location": "StepDefLogin.User_should_be_able_to_logging_successfully()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
-formatter.scenario({
-  "name": "User should be able to approve \u0027awaiting approval\u0027 leaves",
-  "description": "",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "name": "@EmployeeLeaves"
-    }
-  ]
-});
-formatter.step({
-  "name": "User landed on Employee Leave page",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "StepDefEmployeeLeaves.user_landed_on_Employee_leave_page()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Select awaiting approval leave status",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "StepDefEmployeeLeaves.select_awaiting_approval_leave_status()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "click on Search button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "StepDefEmployeeLeaves.click_on_search_button()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Click on action and approved button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "StepDefEmployeeLeaves.click_on_action()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Leave status should be updated accordingly",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "StepDefEmployeeLeaves.leave_status_should_be_updated_accordingly()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.scenario({
-  "name": "User should be able to apply new leave",
-  "description": "",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "name": "@EmployeeLeaves"
-    }
-  ]
-});
-formatter.step({
-  "name": "User landed on Employee Leave page",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "StepDefEmployeeLeaves.user_landed_on_Employee_leave_page()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Click on Apply New Leave button",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "StepDefEmployeeLeaves.click_on_apply_new_leave()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Fill mandatory fields and click on apply button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "StepDefEmployeeLeaves.fill_mandatory_fields()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "New leave should be applied successfully",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "StepDefEmployeeLeaves.new_leave_should_be_applied_successfully()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.scenario({
-  "name": "Getting error message if mandatory fields are missing",
-  "description": "",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "name": "@EmployeeLeaves"
-    }
-  ]
-});
-formatter.step({
-  "name": "User landed on Employee Leave page",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "StepDefEmployeeLeaves.user_landed_on_Employee_leave_page()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Click on Apply New Leave button",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "StepDefEmployeeLeaves.click_on_apply_new_leave()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Leave mandatory fields blank and click on Apply button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "StepDefEmployeeLeaves.leave_mandatory_fields_blank_and_apply()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Error should prevent applying leave flow",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "StepDefEmployeeLeaves.error_should_prevent_applying_leave_flow()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Close the browser",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "StepDefEmployeeLeaves.closing_the_browser()"
-});
-formatter.result({
-  "status": "passed"
+formatter.after({
+  "error_message": "java.lang.NullPointerException: Cannot invoke \"org.openqa.selenium.WebDriver.quit()\" because \"com.aimbeyond.dashboard.step_definitions.StepDefLogin.driver\" is null\r\n\tat com.aimbeyond.dashboard.step_definitions.StepDefLogin.teardown(StepDefLogin.java:34)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:568)\r\n\tat cucumber.runtime.Utils$1.call(Utils.java:26)\r\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\r\n\tat cucumber.runtime.Utils.invoke(Utils.java:20)\r\n\tat cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)\r\n\tat cucumber.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:16)\r\n\tat cucumber.runner.TestStep.executeStep(TestStep.java:63)\r\n\tat cucumber.runner.TestStep.run(TestStep.java:49)\r\n\tat cucumber.runner.TestCase.run(TestCase.java:49)\r\n\tat cucumber.runner.Runner.runPickle(Runner.java:40)\r\n\tat cucumber.runtime.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:146)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:68)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:23)\r\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\r\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\r\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\r\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:73)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:122)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:64)\r\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\r\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\r\n\tat cucumber.api.junit.Cucumber$1.evaluate(Cucumber.java:131)\r\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\r\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\r\n\tat com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)\r\n\tat com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)\r\n\tat com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)\r\n\tat com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)\r\n\tat com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)\r\n\tat com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)\r\n",
+  "status": "failed"
 });
 });

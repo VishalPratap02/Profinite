@@ -3,353 +3,186 @@
     "line": 3,
     "elements": [
       {
-        "line": 5,
-        "name": "User should be able to land on Employee Leaves page",
+        "line": 12,
+        "name": "By login dashboard user should be able to land on Home page",
         "description": "",
-        "id": "employee-leave-records;user-should-be-able-to-land-on-employee-leaves-page",
+        "id": "login-dashboard;by-login-dashboard-user-should-be-able-to-land-on-home-page;;2",
+        "after": [
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException: Cannot invoke \"org.openqa.selenium.WebDriver.quit()\" because \"com.aimbeyond.dashboard.step_definitions.StepDefLogin.driver\" is null\r\n\tat com.aimbeyond.dashboard.step_definitions.StepDefLogin.teardown(StepDefLogin.java:34)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:568)\r\n\tat cucumber.runtime.Utils$1.call(Utils.java:26)\r\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\r\n\tat cucumber.runtime.Utils.invoke(Utils.java:20)\r\n\tat cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)\r\n\tat cucumber.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:16)\r\n\tat cucumber.runner.TestStep.executeStep(TestStep.java:63)\r\n\tat cucumber.runner.TestStep.run(TestStep.java:49)\r\n\tat cucumber.runner.TestCase.run(TestCase.java:49)\r\n\tat cucumber.runner.Runner.runPickle(Runner.java:40)\r\n\tat cucumber.runtime.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:146)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:68)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:23)\r\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\r\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\r\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\r\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:73)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:122)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:64)\r\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\r\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\r\n\tat cucumber.api.junit.Cucumber$1.evaluate(Cucumber.java:131)\r\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\r\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\r\n\tat com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)\r\n\tat com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)\r\n\tat com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)\r\n\tat com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)\r\n\tat com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)\r\n\tat com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)\r\n",
+              "duration": 263200,
+              "status": "failed"
+            },
+            "match": {
+              "location": "StepDefLogin.teardown()"
+            }
+          }
+        ],
         "type": "scenario",
-        "keyword": "Scenario",
+        "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 4582944200,
-              "status": "passed"
+              "error_message": "java.lang.NullPointerException: Cannot invoke \"org.openqa.selenium.WebDriver.get(String)\" because \"com.aimbeyond.dashboard.step_definitions.StepDefLogin.driver\" is null\r\n\tat com.aimbeyond.dashboard.step_definitions.StepDefLogin.Open_browser_and_start_application(StepDefLogin.java:38)\r\n\tat ✽.Open browser and start application(file:src/test/resources/features/Login.feature:6)\r\n",
+              "duration": 22408100,
+              "status": "failed"
             },
             "line": 6,
-            "name": "User have Logged in Dashboard application",
+            "name": "Open browser and start application",
             "match": {
-              "location": "StepDefEmployeeLeaves.user_have_logged_in_Dashboard_application()"
+              "location": "StepDefLogin.Open_browser_and_start_application()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 2034722700,
-              "status": "passed"
+              "duration": 12000,
+              "status": "skipped"
             },
             "line": 7,
-            "name": "Landing to HOME Page",
+            "name": "Enter valid ritu.gupta@aimbeyond.com and 12345",
             "match": {
-              "location": "StepDefEmployeeLeaves.landing_to_HOME_page()"
+              "arguments": [
+                {
+                  "val": "ritu.gupta@aimbeyond.com",
+                  "offset": 12
+                },
+                {
+                  "val": "12345",
+                  "offset": 41
+                }
+              ],
+              "location": "StepDefLogin.Enter_valid_username_and_password(String,String)"
             },
-            "keyword": "And "
+            "keyword": "When "
           },
           {
             "result": {
-              "duration": 7605268400,
-              "status": "passed"
+              "duration": 6500,
+              "status": "skipped"
             },
             "line": 8,
-            "name": "Click on Employee Leaves from ADMIN drop down",
+            "name": "Click on login button",
             "match": {
-              "location": "StepDefEmployeeLeaves.click_employee_leaves_from_admin()"
+              "location": "StepDefLogin.Click_on_login_button()"
             },
-            "keyword": "When "
+            "keyword": "And "
           },
           {
             "result": {
-              "duration": 2020704300,
-              "status": "passed"
+              "duration": 4900,
+              "status": "skipped"
             },
             "line": 9,
-            "name": "User should be able to land on Employee Leaves page",
+            "name": "User should be able to logging successfully",
             "match": {
-              "location": "StepDefEmployeeLeaves.user_should_be_able_to_land_on_employee_leaves_page()"
+              "location": "StepDefLogin.User_should_be_able_to_logging_successfully()"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@EmployeeLeaves"
+            "name": "@login"
           }
         ]
       },
       {
-        "line": 11,
-        "name": "User should be able to filter employee leave records by different fields",
+        "line": 13,
+        "name": "By login dashboard user should be able to land on Home page",
         "description": "",
-        "id": "employee-leave-records;user-should-be-able-to-filter-employee-leave-records-by-different-fields",
+        "id": "login-dashboard;by-login-dashboard-user-should-be-able-to-land-on-home-page;;3",
+        "after": [
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException: Cannot invoke \"org.openqa.selenium.WebDriver.quit()\" because \"com.aimbeyond.dashboard.step_definitions.StepDefLogin.driver\" is null\r\n\tat com.aimbeyond.dashboard.step_definitions.StepDefLogin.teardown(StepDefLogin.java:34)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:568)\r\n\tat cucumber.runtime.Utils$1.call(Utils.java:26)\r\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\r\n\tat cucumber.runtime.Utils.invoke(Utils.java:20)\r\n\tat cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)\r\n\tat cucumber.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:16)\r\n\tat cucumber.runner.TestStep.executeStep(TestStep.java:63)\r\n\tat cucumber.runner.TestStep.run(TestStep.java:49)\r\n\tat cucumber.runner.TestCase.run(TestCase.java:49)\r\n\tat cucumber.runner.Runner.runPickle(Runner.java:40)\r\n\tat cucumber.runtime.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:146)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:68)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:23)\r\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\r\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\r\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\r\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:73)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:122)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:64)\r\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\r\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\r\n\tat cucumber.api.junit.Cucumber$1.evaluate(Cucumber.java:131)\r\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\r\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\r\n\tat com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)\r\n\tat com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)\r\n\tat com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)\r\n\tat com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)\r\n\tat com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)\r\n\tat com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)\r\n",
+              "duration": 207100,
+              "status": "failed"
+            },
+            "match": {
+              "location": "StepDefLogin.teardown()"
+            }
+          }
+        ],
         "type": "scenario",
-        "keyword": "Scenario",
+        "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 1010153800,
-              "status": "passed"
+              "error_message": "java.lang.NullPointerException: Cannot invoke \"org.openqa.selenium.WebDriver.get(String)\" because \"com.aimbeyond.dashboard.step_definitions.StepDefLogin.driver\" is null\r\n\tat com.aimbeyond.dashboard.step_definitions.StepDefLogin.Open_browser_and_start_application(StepDefLogin.java:38)\r\n\tat ✽.Open browser and start application(file:src/test/resources/features/Login.feature:6)\r\n",
+              "duration": 403500,
+              "status": "failed"
             },
-            "line": 12,
-            "name": "User landed on Employee Leave page",
+            "line": 6,
+            "name": "Open browser and start application",
             "match": {
-              "location": "StepDefEmployeeLeaves.user_landed_on_Employee_leave_page()"
+              "location": "StepDefLogin.Open_browser_and_start_application()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 2669506500,
-              "status": "passed"
+              "duration": 5900,
+              "status": "skipped"
             },
-            "line": 13,
-            "name": "Select leave type as Paid Time Off",
+            "line": 7,
+            "name": "Enter valid dashboard@aimbeyond.com and 12345",
             "match": {
-              "location": "StepDefEmployeeLeaves.select_leave_type_as_paid_off()"
+              "arguments": [
+                {
+                  "val": "dashboard@aimbeyond.com",
+                  "offset": 12
+                },
+                {
+                  "val": "12345",
+                  "offset": 40
+                }
+              ],
+              "location": "StepDefLogin.Enter_valid_username_and_password(String,String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 327607300,
-              "status": "passed"
+              "duration": 5400,
+              "status": "skipped"
             },
-            "line": 14,
-            "name": "click on Search button",
+            "line": 8,
+            "name": "Click on login button",
             "match": {
-              "location": "StepDefEmployeeLeaves.click_on_search_button()"
+              "location": "StepDefLogin.Click_on_login_button()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 394542200,
-              "status": "passed"
+              "duration": 4800,
+              "status": "skipped"
             },
-            "line": 15,
-            "name": "Only Paid time off leave type should appear",
+            "line": 9,
+            "name": "User should be able to logging successfully",
             "match": {
-              "location": "StepDefEmployeeLeaves.only_paid_time_off_leave_type_should_appear()"
+              "location": "StepDefLogin.User_should_be_able_to_logging_successfully()"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@EmployeeLeaves"
-          }
-        ]
-      },
-      {
-        "line": 17,
-        "name": "User should be able to approve \u0027awaiting approval\u0027 leaves",
-        "description": "",
-        "id": "employee-leave-records;user-should-be-able-to-approve--awaiting-approval--leaves",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 1007406900,
-              "status": "passed"
-            },
-            "line": 18,
-            "name": "User landed on Employee Leave page",
-            "match": {
-              "location": "StepDefEmployeeLeaves.user_landed_on_Employee_leave_page()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 2624352800,
-              "status": "passed"
-            },
-            "line": 19,
-            "name": "Select awaiting approval leave status",
-            "match": {
-              "location": "StepDefEmployeeLeaves.select_awaiting_approval_leave_status()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 318167600,
-              "status": "passed"
-            },
-            "line": 20,
-            "name": "click on Search button",
-            "match": {
-              "location": "StepDefEmployeeLeaves.click_on_search_button()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 2580752200,
-              "status": "passed"
-            },
-            "line": 21,
-            "name": "Click on action and approved button",
-            "match": {
-              "location": "StepDefEmployeeLeaves.click_on_action()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 326746700,
-              "status": "passed"
-            },
-            "line": 22,
-            "name": "Leave status should be updated accordingly",
-            "match": {
-              "location": "StepDefEmployeeLeaves.leave_status_should_be_updated_accordingly()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@EmployeeLeaves"
-          }
-        ]
-      },
-      {
-        "line": 24,
-        "name": "User should be able to apply new leave",
-        "description": "",
-        "id": "employee-leave-records;user-should-be-able-to-apply-new-leave",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 1013638500,
-              "status": "passed"
-            },
-            "line": 25,
-            "name": "User landed on Employee Leave page",
-            "match": {
-              "location": "StepDefEmployeeLeaves.user_landed_on_Employee_leave_page()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 1346272000,
-              "status": "passed"
-            },
-            "line": 26,
-            "name": "Click on Apply New Leave button",
-            "match": {
-              "location": "StepDefEmployeeLeaves.click_on_apply_new_leave()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 10763705800,
-              "status": "passed"
-            },
-            "line": 27,
-            "name": "Fill mandatory fields and click on apply button",
-            "match": {
-              "location": "StepDefEmployeeLeaves.fill_mandatory_fields()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 319683200,
-              "status": "passed"
-            },
-            "line": 28,
-            "name": "New leave should be applied successfully",
-            "match": {
-              "location": "StepDefEmployeeLeaves.new_leave_should_be_applied_successfully()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@EmployeeLeaves"
-          }
-        ]
-      },
-      {
-        "line": 30,
-        "name": "Getting error message if mandatory fields are missing",
-        "description": "",
-        "id": "employee-leave-records;getting-error-message-if-mandatory-fields-are-missing",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 1008803700,
-              "status": "passed"
-            },
-            "line": 31,
-            "name": "User landed on Employee Leave page",
-            "match": {
-              "location": "StepDefEmployeeLeaves.user_landed_on_Employee_leave_page()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 1390251300,
-              "status": "passed"
-            },
-            "line": 32,
-            "name": "Click on Apply New Leave button",
-            "match": {
-              "location": "StepDefEmployeeLeaves.click_on_apply_new_leave()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 1310338500,
-              "status": "passed"
-            },
-            "line": 33,
-            "name": "Leave mandatory fields blank and click on Apply button",
-            "match": {
-              "location": "StepDefEmployeeLeaves.leave_mandatory_fields_blank_and_apply()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 84799500,
-              "status": "passed"
-            },
-            "line": 34,
-            "name": "Error should prevent applying leave flow",
-            "match": {
-              "location": "StepDefEmployeeLeaves.error_should_prevent_applying_leave_flow()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 729736100,
-              "status": "passed"
-            },
-            "line": 35,
-            "name": "Close the browser",
-            "match": {
-              "location": "StepDefEmployeeLeaves.closing_the_browser()"
-            },
-            "keyword": "And "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@EmployeeLeaves"
+            "name": "@login"
           }
         ]
       }
     ],
-    "name": "Employee leave records",
+    "name": "Login Dashboard",
     "description": "",
-    "id": "employee-leave-records",
+    "id": "login-dashboard",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/Employee%20Leaves.feature",
+    "uri": "file:src/test/resources/features/Login.feature",
     "tags": [
       {
-        "name": "@EmployeeLeaves",
+        "name": "@login",
         "type": "Tag",
         "location": {
           "line": 1,
