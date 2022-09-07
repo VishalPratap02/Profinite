@@ -9,7 +9,8 @@ import cucumber.api.CucumberOptions;
 @CucumberOptions(
         monochrome = true,
         features = {"src/test/resources/features"},
-        tags = {"@login"},
+        tags = {"@ViewAttendance"},
+//        tags = {"@login"},
         plugin = {"pretty","html:target/cucumber-html-report","json:target/cucumber-report/cucumber.json"},
         glue = {"com.aimbeyond.dashboard"}
 )

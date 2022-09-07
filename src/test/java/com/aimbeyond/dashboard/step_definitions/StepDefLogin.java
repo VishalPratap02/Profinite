@@ -8,8 +8,8 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import cucumber.api.java.Before;
 import org.junit.Assert;
-import org.junit.Before;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -20,7 +20,7 @@ public class StepDefLogin {
      public static WebDriver driver;
      loginPage login;
 
-@Before
+    @Before
     public void browser_setup() throws Throwable {
         System.setProperty("webdriver.gecko.driver", "C:\\Users\\Vishal Pratap Singh\\Downloads\\geckodriver-v0.31.0-win64\\geckodriver.exe");
         driver = new FirefoxDriver();

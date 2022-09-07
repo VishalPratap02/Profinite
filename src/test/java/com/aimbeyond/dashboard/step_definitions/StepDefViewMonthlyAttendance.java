@@ -92,10 +92,12 @@ public class StepDefViewMonthlyAttendance {
 
     @And("Click on Export to Excel Button")
     public void click_on_export_to_excel_button() throws Throwable {
+        Thread.sleep(1000);
         WebDriverWait wait = new WebDriverWait(driver,8);
         WebElement tvalue = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[2]/div/div/div[2]/div[3]/button[2]")));
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         tvalue.sendKeys(Keys.ENTER);
+        Thread.sleep(1000);
     }
 
     @Then("Excel sheet with monthly attendance records should be downloaded in download folder")

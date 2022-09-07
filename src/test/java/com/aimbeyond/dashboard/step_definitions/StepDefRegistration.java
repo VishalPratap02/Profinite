@@ -71,10 +71,10 @@ public class StepDefRegistration {
 
     @When("Filling employee details")
     public void filling_employee_details() throws Throwable {
-        driver.findElement(By.id("firstName")).sendKeys("Amar");
+        driver.findElement(By.id("firstName")).sendKeys("kamal");
         driver.findElement(By.name("lastName")).sendKeys("Singh");
         driver.findElement(By.name("primaryContact")).sendKeys("7101213146");
-        driver.findElement(By.name("employeeCode")).sendKeys("83");
+        driver.findElement(By.name("employeeCode")).sendKeys("183");
         driver.findElement(By.name("source")).sendKeys("Naukri");
         driver.findElement(By.name("aadharNo")).sendKeys("123134545622");
         driver.findElement(By.name("panNo")).sendKeys("BKCQR2004K");
@@ -100,7 +100,8 @@ public class StepDefRegistration {
     public void registration_should_be_completed_successfully() throws Throwable{
         String url = driver.getCurrentUrl();
         System.out.println("Page url is "+url);
-        Assert.assertEquals("http://192.168.0.27:5000/dashboard/viewEmployees",url);
+     //   Assert.assertEquals("http://192.168.0.27:5000/dashboard/viewEmployees",url);
+        Assert.assertEquals("http://192.168.0.27:5000/dashboard/registrationComponent",url);
         Thread.sleep(1000);
     }
 

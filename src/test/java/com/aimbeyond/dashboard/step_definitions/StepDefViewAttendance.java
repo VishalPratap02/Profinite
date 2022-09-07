@@ -10,27 +10,38 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import com.aimbeyond.dashboard.utilities.Hooks;
+//import com.aimbeyond.dashboard.utilities.Hooks;
 
 import java.io.File;
 
 public class StepDefViewAttendance {
-  public static WebDriver driver;
+   WebDriver driver;
+   StepDefLogin stepDefLogin;// = new StepDefLogin();
 
     @Given("^User have Logged In Dashboard application$")
     public void user_have_logged_in_Dashboard_application() throws Throwable{
-        System.setProperty("webdriver.gecko.driver","C:\\Users\\Vishal Pratap Singh\\Downloads\\geckodriver-v0.31.0-win64\\geckodriver.exe");
-        driver = new FirefoxDriver();
-        driver.get("http://192.168.0.27:5000/");
-        driver.manage().window().maximize();
-        driver.manage().deleteAllCookies();
-        driver.findElement(By.name("username")).sendKeys("ritu.gupta@aimbeyond.com");
-        driver.findElement(By.name("password")).sendKeys("12345");
-        Thread.sleep(100);
-        driver.findElement(By.xpath("//button[@type='submit']")).click();
-        Thread.sleep(100);
+        stepDefLogin.browser_setup();
+        stepDefLogin.Open_browser_and_start_application();
+        stepDefLogin.Enter_valid_username_and_password("ritu.gupta@aimbeyond.com", "12345");
+        stepDefLogin.Click_on_login_button();
+//        stepDefLogin.User_should_be_able_to_logging_successfully();
+//        System.setProperty("webdriver.gecko.driver","C:\\Users\\Vishal Pratap Singh\\Downloads\\geckodriver-v0.31.0-win64\\geckodriver.exe");
+//        driver = new FirefoxDriver();
+//        driver.get("http://192.168.0.27:5000/");
+//        driver.manage().window().maximize();
+//        driver.manage().deleteAllCookies();
+//        driver.findElement(By.name("username")).sendKeys("ritu.gupta@aimbeyond.com");
+//        driver.findElement(By.name("password")).sendKeys("12345");
+//        Thread.sleep(100);
+//        driver.findElement(By.xpath("//button[@type='submit']")).click();
+//        Thread.sleep(100);
+    }
+
+    public StepDefViewAttendance(WebDriver driver){
+        this.driver = driver;
     }
 
     @And("^Landing To HOME Page$")

@@ -14,7 +14,7 @@ Feature: Giving permission to groups
     And Provide group name and click on save button
     Then New group should be added successfully
 
-  Scenario: Getting error message if group field is missing
+  Scenario: Getting error message if. group field is missing
     Given User is on User Group page
     When  Click on add group button
     And   Click on save button without giving group name
