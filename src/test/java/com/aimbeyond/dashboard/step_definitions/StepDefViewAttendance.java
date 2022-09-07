@@ -99,26 +99,16 @@ public class StepDefViewAttendance {
     @Then("Employee attendance record including In-time and Out-time should appear")
     public void employee_attendance_record_including_time() throws Throwable {
         vwAttendance.employee_attendance_record_shoud_appear();
-//        String name = driver.findElement(By.xpath("//*[@id=\"root\"]/div[2]/div/div/div[3]/div[2]/div/div/div[1]")).getText();
-//        String t1 = driver.findElement(By.xpath("//*[@id=\"root\"]/div[2]/div/div/div[3]/div[2]/div/div/div[2]")).getText();
-//        String t2 = driver.findElement(By.xpath("//*[@id=\"root\"]/div[2]/div/div/div[3]/div[2]/div/div/div[3]")).getText();
-//        String comments = driver.findElement(By.xpath("//*[@id=\"root\"]/div[2]/div/div/div[3]/div[2]/div/div/div[4]")).getText();
-//        System.out.println("Name - "+name);
-//        System.out.println("In-time - "+t1);
-//        System.out.println("Out-time - "+t2);
-//        System.out.println("Comments - "+comments);
     }
 
     @When("Select employee name with date and click on View button")
     public void select_employee_name_with_date_and_click_view_button() throws Throwable {
         vwAttendance.click_view_button();
-//        driver.findElement(By.xpath("//*[@id=\"root\"]/div[2]/div/div/div[2]/div[3]/button[1]")).click();
     }
 
     @And("Click on Export to Excel button")
     public void click_on_export_to_excel_button() throws Throwable {
         vwAttendance.click_on_export_excel();
-//        driver.findElement(By.xpath("//*[@id=\"root\"]/div[2]/div/div/div[2]/div[3]/button[2]")).click();
     }
 
     @Then("Excel sheet with attendance records should be downloaded in download folder")

@@ -10,4 +10,4 @@ Feature: Login Dashboard
     Examples:
       | username                 | | password |
       | ritu.gupta@aimbeyond.com | | 12345 |
-      | dashboard@aimbeyond.com  | | 12345 |
+#      | dashboard@aimbeyond.com  | | 12345 |
