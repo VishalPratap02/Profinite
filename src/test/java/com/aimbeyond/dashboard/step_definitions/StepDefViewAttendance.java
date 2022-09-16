@@ -1,5 +1,8 @@
 package com.aimbeyond.dashboard.step_definitions;
 
+import com.aimbeyond.dashboard.pages.viewAttendance;
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -10,17 +13,45 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import com.aimbeyond.dashboard.utilities.Hooks;
+//import com.aimbeyond.dashboard.utilities.Hooks;
 
 import java.io.File;
+import java.util.concurrent.TimeUnit;
 
 public class StepDefViewAttendance {
-  public static WebDriver driver;
+   public static WebDriver driver;
+   viewAttendance vwAttendance;
+//   StepDefLogin stepDefLogin = new StepDefLogin();
+
+//    @Before
+//    public void browser_setup() throws Throwable {
+//        System.setProperty("webdriver.gecko.driver","C:\\Users\\Vishal Pratap Singh\\Downloads\\geckodriver-v0.31.0-win64\\geckodriver.exe");
+//        driver = new FirefoxDriver();
+//        driver.get("http://192.168.0.27:5000/");
+//        driver.manage().window().maximize();
+//        driver.manage().deleteAllCookies();
+//        driver.findElement(By.name("username")).sendKeys("ritu.gupta@aimbeyond.com");
+//        driver.findElement(By.name("password")).sendKeys("12345");
+//        Thread.sleep(100);
+//        driver.findElement(By.xpath("//button[@type='submit']")).click();
+//        Thread.sleep(100);
+//    }
+//
+//    @After
+//    public void teardown() throws Throwable {
+//        driver.quit();
+//    }
 
     @Given("^User have Logged In Dashboard application$")
     public void user_have_logged_in_Dashboard_application() throws Throwable{
+//        stepDefLogin.browser_setup();
+//        stepDefLogin.Open_browser_and_start_application();
+//        stepDefLogin.Enter_valid_username_and_password("ritu.gupta@aimbeyond.com", "12345");
+//        stepDefLogin.Click_on_login_button();
+//        stepDefLogin.User_should_be_able_to_logging_successfully();
         System.setProperty("webdriver.gecko.driver","C:\\Users\\Vishal Pratap Singh\\Downloads\\geckodriver-v0.31.0-win64\\geckodriver.exe");
         driver = new FirefoxDriver();
         driver.get("http://192.168.0.27:5000/");
@@ -31,7 +62,12 @@ public class StepDefViewAttendance {
         Thread.sleep(100);
         driver.findElement(By.xpath("//button[@type='submit']")).click();
         Thread.sleep(100);
+
     }
+
+//    public StepDefViewAttendance(WebDriver driver){
+//        this.driver = driver;
+//    }
 
     @And("^Landing To HOME Page$")
     public void landing_to_HOME_page() throws Throwable {
@@ -78,29 +114,24 @@ public class StepDefViewAttendance {
 
     @And("Click on View button")
     public void click_on_view_button() throws Throwable {
-        driver.findElement(By.xpath("//*[@id=\"root\"]/div[2]/div/div/div[2]/div[3]/button[1]")).click();
+        vwAttendance = new viewAttendance(driver);
+        vwAttendance.click_view_button();
+//        driver.findElement(By.xpath("//*[@id=\"root\"]/div[2]/div/div/div[2]/div[3]/button[1]")).click();
     }
 
     @Then("Employee attendance record including In-time and Out-time should appear")
     public void employee_attendance_record_including_time() throws Throwable {
-        String name = driver.findElement(By.xpath("//*[@id=\"root\"]/div[2]/div/div/div[3]/div[2]/div/div/div[1]")).getText();
-        String t1 = driver.findElement(By.xpath("//*[@id=\"root\"]/div[2]/div/div/div[3]/div[2]/div/div/div[2]")).getText();
-        String t2 = driver.findElement(By.xpath("//*[@id=\"root\"]/div[2]/div/div/div[3]/div[2]/div/div/div[3]")).getText();
-        String comments = driver.findElement(By.xpath("//*[@id=\"root\"]/div[2]/div/div/div[3]/div[2]/div/div/div[4]")).getText();
-        System.out.println("Name - "+name);
-        System.out.println("In-time - "+t1);
-        System.out.println("Out-time - "+t2);
-        System.out.println("Comments - "+comments);
+        vwAttendance.employee_attendance_record_shoud_appear();
     }
 
     @When("Select employee name with date and click on View button")
     public void select_employee_name_with_date_and_click_view_button() throws Throwable {
-        driver.findElement(By.xpath("//*[@id=\"root\"]/div[2]/div/div/div[2]/div[3]/button[1]")).click();
+        vwAttendance.click_view_button();
     }
 
     @And("Click on Export to Excel button")
     public void click_on_export_to_excel_button() throws Throwable {
-        driver.findElement(By.xpath("//*[@id=\"root\"]/div[2]/div/div/div[2]/div[3]/button[2]")).click();
+        vwAttendance.click_on_export_excel();
     }
 
     @Then("Excel sheet with attendance records should be downloaded in download folder")
@@ -115,8 +146,4 @@ public class StepDefViewAttendance {
         }
     }
 
-    @And("^Close the Browser$")
-    public void closing_the_browser() throws Throwable{
-
-    }
 }

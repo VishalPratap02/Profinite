@@ -9,6 +9,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -19,7 +20,9 @@ public class StepDefProjectEmployeeLeaves {
     @Given("^User have logged In Dashboard application$")
     public void user_have_logged_in_Dashboard_application() throws Throwable{
         System.setProperty("webdriver.gecko.driver","C:\\Users\\Vishal Pratap Singh\\Downloads\\geckodriver-v0.31.0-win64\\geckodriver.exe");
+//        System.setProperty("webdriver.chrome.driver","C:\\Users\\Vishal Pratap Singh\\Downloads\\chromedriver_win32\\chromedriver.exe");
         driver = new FirefoxDriver();
+//        driver = new ChromeDriver();
         driver.get("http://192.168.0.27:5000/");
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();

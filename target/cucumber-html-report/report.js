@@ -1,34 +1,88 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/Login.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/Album.feature");
 formatter.feature({
-  "name": "Login Dashboard",
+  "name": "View or Add album",
   "description": "",
   "keyword": "Feature",
   "tags": [
     {
-      "name": "@login"
+      "name": "@Album"
     }
   ]
 });
+formatter.scenario({
+  "name": "User should be able to land on album page",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@Album"
+    }
+  ]
+});
+formatter.step({
+  "name": "User have Logged into Dashboard application",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "StepDefAlbum.user_have_logged_in_Dashboard_application()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Landing To HOME page",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "StepDefAlbum.landing_to_HOME_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Click on Album from ADMIN drop down",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "StepDefAlbum.click_on_Album_from_ADMIN_drop_down()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "User should be able to land on Album page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "StepDefAlbum.user_should_be_able_to_land_on_album_page()"
+});
+formatter.result({
+  "status": "passed"
+});
 formatter.scenarioOutline({
-  "name": "By login dashboard user should be able to land on Home page",
+  "name": "User should be able to add an album",
   "description": "",
   "keyword": "Scenario Outline"
 });
 formatter.step({
-  "name": "Open browser and start application",
+  "name": "User is on Album page",
   "keyword": "Given "
 });
 formatter.step({
-  "name": "Enter valid \u003cusername\u003e and \u003cpassword\u003e",
+  "name": "Click on NEW ALBUM button and fill the mandatory fields including \"\u003cAlbumName\u003e\"",
   "keyword": "When "
 });
 formatter.step({
-  "name": "Click on login button",
+  "name": "Click on UPLOAD NOW button",
   "keyword": "And "
 });
 formatter.step({
-  "name": "User should be able to logging successfully",
+  "name": "Album should created successfully",
   "keyword": "Then "
+});
+formatter.step({
+  "name": "Metadata should match with the values provided",
+  "keyword": "And "
 });
 formatter.examples({
   "name": "",
@@ -37,135 +91,166 @@ formatter.examples({
   "rows": [
     {
       "cells": [
-        "username",
-        "",
-        "password"
+        "AlbumName"
       ]
     },
     {
       "cells": [
-        "ritu.gupta@aimbeyond.com",
-        "",
-        "12345"
-      ]
-    },
-    {
-      "cells": [
-        "dashboard@aimbeyond.com",
-        "",
-        "12345"
+        "album_9"
       ]
     }
   ]
 });
 formatter.scenario({
-  "name": "By login dashboard user should be able to land on Home page",
+  "name": "User should be able to add an album",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@login"
+      "name": "@Album"
     }
   ]
 });
 formatter.step({
-  "name": "Open browser and start application",
+  "name": "User is on Album page",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "StepDefLogin.Open_browser_and_start_application()"
+  "location": "StepDefAlbum.user_is_on_album_page()"
 });
 formatter.result({
-  "error_message": "java.lang.NullPointerException: Cannot invoke \"org.openqa.selenium.WebDriver.get(String)\" because \"com.aimbeyond.dashboard.step_definitions.StepDefLogin.driver\" is null\r\n\tat com.aimbeyond.dashboard.step_definitions.StepDefLogin.Open_browser_and_start_application(StepDefLogin.java:38)\r\n\tat ✽.Open browser and start application(file:src/test/resources/features/Login.feature:6)\r\n",
-  "status": "failed"
+  "status": "passed"
 });
 formatter.step({
-  "name": "Enter valid ritu.gupta@aimbeyond.com and 12345",
+  "name": "Click on NEW ALBUM button and fill the mandatory fields including \"album_9\"",
   "keyword": "When "
 });
 formatter.match({
-  "location": "StepDefLogin.Enter_valid_username_and_password(String,String)"
+  "location": "StepDefAlbum.click_on_new_album_button_and_fill_the_mandatory_fields(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
-  "name": "Click on login button",
+  "name": "Click on UPLOAD NOW button",
   "keyword": "And "
 });
 formatter.match({
-  "location": "StepDefLogin.Click_on_login_button()"
+  "location": "StepDefAlbum.click_on_upload_now_button()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
-  "name": "User should be able to logging successfully",
+  "name": "Album should created successfully",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "StepDefLogin.User_should_be_able_to_logging_successfully()"
+  "location": "StepDefAlbum.album_should_created_successfully()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
-formatter.after({
-  "error_message": "java.lang.NullPointerException: Cannot invoke \"org.openqa.selenium.WebDriver.quit()\" because \"com.aimbeyond.dashboard.step_definitions.StepDefLogin.driver\" is null\r\n\tat com.aimbeyond.dashboard.step_definitions.StepDefLogin.teardown(StepDefLogin.java:34)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:568)\r\n\tat cucumber.runtime.Utils$1.call(Utils.java:26)\r\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\r\n\tat cucumber.runtime.Utils.invoke(Utils.java:20)\r\n\tat cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)\r\n\tat cucumber.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:16)\r\n\tat cucumber.runner.TestStep.executeStep(TestStep.java:63)\r\n\tat cucumber.runner.TestStep.run(TestStep.java:49)\r\n\tat cucumber.runner.TestCase.run(TestCase.java:49)\r\n\tat cucumber.runner.Runner.runPickle(Runner.java:40)\r\n\tat cucumber.runtime.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:146)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:68)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:23)\r\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\r\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\r\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\r\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:73)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:122)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:64)\r\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\r\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\r\n\tat cucumber.api.junit.Cucumber$1.evaluate(Cucumber.java:131)\r\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\r\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\r\n\tat com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)\r\n\tat com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)\r\n\tat com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)\r\n\tat com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)\r\n\tat com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)\r\n\tat com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)\r\n",
-  "status": "failed"
+formatter.step({
+  "name": "Metadata should match with the values provided",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "StepDefAlbum.metadata_should_match_with_the_values_provided()"
+});
+formatter.result({
+  "status": "passed"
 });
 formatter.scenario({
-  "name": "By login dashboard user should be able to land on Home page",
+  "name": "Getting error message if mandatory fields are missing",
   "description": "",
-  "keyword": "Scenario Outline",
+  "keyword": "Scenario",
   "tags": [
     {
-      "name": "@login"
+      "name": "@Album"
     }
   ]
 });
 formatter.step({
-  "name": "Open browser and start application",
+  "name": "User is on Album page",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "StepDefLogin.Open_browser_and_start_application()"
+  "location": "StepDefAlbum.user_is_on_album_page()"
 });
 formatter.result({
-  "error_message": "java.lang.NullPointerException: Cannot invoke \"org.openqa.selenium.WebDriver.get(String)\" because \"com.aimbeyond.dashboard.step_definitions.StepDefLogin.driver\" is null\r\n\tat com.aimbeyond.dashboard.step_definitions.StepDefLogin.Open_browser_and_start_application(StepDefLogin.java:38)\r\n\tat ✽.Open browser and start application(file:src/test/resources/features/Login.feature:6)\r\n",
-  "status": "failed"
+  "status": "passed"
 });
 formatter.step({
-  "name": "Enter valid dashboard@aimbeyond.com and 12345",
+  "name": "Click on NEW ALBUM button and leave mandatory fields",
   "keyword": "When "
 });
 formatter.match({
-  "location": "StepDefLogin.Enter_valid_username_and_password(String,String)"
+  "location": "StepDefAlbum.click_on_new_album_button_and_leave_mandatory_fields()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
-  "name": "Click on login button",
+  "name": "Click on UPLOAD NOW button",
   "keyword": "And "
 });
 formatter.match({
-  "location": "StepDefLogin.Click_on_login_button()"
+  "location": "StepDefAlbum.click_on_upload_now_button()"
 });
 formatter.result({
-  "status": "skipped"
+  "error_message": "java.lang.NullPointerException: Cannot invoke \"com.aimbeyond.dashboard.pages.albumPage.click_upload_now()\" because \"this.albumpage\" is null\r\n\tat com.aimbeyond.dashboard.step_definitions.StepDefAlbum.click_on_upload_now_button(StepDefAlbum.java:73)\r\n\tat ✽.Click on UPLOAD NOW button(file:src/test/resources/features/Album.feature:24)\r\n",
+  "status": "failed"
 });
 formatter.step({
-  "name": "User should be able to logging successfully",
+  "name": "Error should prevent creating new album flow",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "StepDefLogin.User_should_be_able_to_logging_successfully()"
+  "location": "StepDefAlbum.error_should_prevent_creating_new_album_flow()"
 });
 formatter.result({
   "status": "skipped"
 });
-formatter.after({
-  "error_message": "java.lang.NullPointerException: Cannot invoke \"org.openqa.selenium.WebDriver.quit()\" because \"com.aimbeyond.dashboard.step_definitions.StepDefLogin.driver\" is null\r\n\tat com.aimbeyond.dashboard.step_definitions.StepDefLogin.teardown(StepDefLogin.java:34)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:568)\r\n\tat cucumber.runtime.Utils$1.call(Utils.java:26)\r\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\r\n\tat cucumber.runtime.Utils.invoke(Utils.java:20)\r\n\tat cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)\r\n\tat cucumber.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:16)\r\n\tat cucumber.runner.TestStep.executeStep(TestStep.java:63)\r\n\tat cucumber.runner.TestStep.run(TestStep.java:49)\r\n\tat cucumber.runner.TestCase.run(TestCase.java:49)\r\n\tat cucumber.runner.Runner.runPickle(Runner.java:40)\r\n\tat cucumber.runtime.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:146)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:68)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:23)\r\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\r\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\r\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\r\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:73)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:122)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:64)\r\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\r\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\r\n\tat cucumber.api.junit.Cucumber$1.evaluate(Cucumber.java:131)\r\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\r\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\r\n\tat com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)\r\n\tat com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)\r\n\tat com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)\r\n\tat com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)\r\n\tat com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)\r\n\tat com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)\r\n",
+formatter.scenario({
+  "name": "User should be able to edit album images",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@Album"
+    }
+  ]
+});
+formatter.step({
+  "name": "User is on Album page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "StepDefAlbum.user_is_on_album_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Click on a particular album",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "StepDefAlbum.click_on_a_particular_album()"
+});
+formatter.result({
+  "error_message": "org.openqa.selenium.ElementClickInterceptedException: Element \u003ca href\u003d\"/dashboard/editAlbumImages\"\u003e is not clickable at point (116,286) because another element \u003cdiv class\u003d\"modal\"\u003e obscures it\nBuild info: version: \u00274.1.1\u0027, revision: \u0027e8fcc2cecf\u0027\nSystem info: host: \u0027DESKTOP-D9NGSTG\u0027, ip: \u0027192.168.0.88\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002717.0.1\u0027\nDriver info: org.openqa.selenium.firefox.FirefoxDriver\nCommand: [2dd65b75-c753-453e-b03e-da3e6f7f7885, clickElement {id\u003da64d035e-cdf7-449d-9a6f-d3842de5c605}]\nCapabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 101.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20220608170832, moz:debuggerAddress: localhost:58783, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:processID: 18976, moz:profile: C:\\Users\\VISHAL~1\\AppData\\L..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), se:cdp: ws://localhost:58783/devtoo..., se:cdpVersion: 85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nElement: [[FirefoxDriver: firefox on WINDOWS (2dd65b75-c753-453e-b03e-da3e6f7f7885)] -\u003e xpath: //*[@id\u003d\"root\"]/div[2]/div/div[2]/table/tbody/tr[1]/td[1]/a]\nSession ID: 2dd65b75-c753-453e-b03e-da3e6f7f7885\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)\r\n\tat com.aimbeyond.dashboard.step_definitions.StepDefAlbum.click_on_a_particular_album(StepDefAlbum.java:120)\r\n\tat ✽.Click on a particular album(file:src/test/resources/features/Album.feature:29)\r\n",
   "status": "failed"
+});
+formatter.step({
+  "name": "User should be able to land on editAlbumImages page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "StepDefAlbum.user_land_on_edit_album_images_page()"
+});
+formatter.result({
+  "status": "skipped"
 });
 });

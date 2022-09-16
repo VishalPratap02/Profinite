@@ -15,20 +15,16 @@ Feature: View or Add album
     And Metadata should match with the values provided
   Examples:
   |AlbumName|
-  |album_1|
+  |album_9|
 #  |album_2|
-#  |album_3|
-#  |album_4|
-#  |album_5|
 
+  Scenario: Getting error message if mandatory fields are missing
+    Given User is on Album page
+    When  Click on NEW ALBUM button and leave mandatory fields
+    And   Click on UPLOAD NOW button
+    Then  Error should prevent creating new album flow
 
-#  Scenario: Getting error message if mandatory fields are missing
-#    Given User is on Album page
-#    When  Click on NEW ALBUM button and leave mandatory fields
-#    And   Click on UPLOAD NOW button
-#    Then  Error should prevent creating new album flow
-#
-#  Scenario: User should be able to edit album images
-#    Given User is on Album page
-#    When Click on a particular album
-#    Then User should be able to land on editAlbumImages page
+  Scenario: User should be able to edit album images
+    Given User is on Album page
+    When Click on a particular album
+    Then User should be able to land on editAlbumImages page

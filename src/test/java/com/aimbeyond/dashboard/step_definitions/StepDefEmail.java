@@ -1,5 +1,6 @@
 package com.aimbeyond.dashboard.step_definitions;
 
+import com.aimbeyond.dashboard.pages.emailPage;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -15,6 +16,7 @@ import java.util.Locale;
 public class StepDefEmail {
 
     public static WebDriver driver;
+    emailPage emailpage;
 
     @Given("^User have Logged into Dashboard Application$")
     public void user_have_logged_In_Dashboard_application() throws Throwable{
@@ -69,15 +71,18 @@ public class StepDefEmail {
 
     @When("Fill the mandatory fields")
     public void fill_the_mandatory_fields() throws Throwable{
-        driver.findElement(By.xpath("//*[@id=\"root\"]/div[2]/div/div/div[2]/div[1]/div[1]/input")).sendKeys("vishal.singh@aimbeyond.com");
-        driver.findElement(By.xpath("//*[@id=\"root\"]/div[2]/div/div/div[2]/div[1]/div[1]/input")).sendKeys(Keys.ENTER);
-        driver.findElement(By.name("subject")).sendKeys("Automation Testing");
+        emailpage = new emailPage(driver);
+        emailpage.email_mandatory_fields();
+//        driver.findElement(By.xpath("//*[@id=\"root\"]/div[2]/div/div/div[2]/div[1]/div[1]/input")).sendKeys("vishal.singh@aimbeyond.com");
+//        driver.findElement(By.xpath("//*[@id=\"root\"]/div[2]/div/div/div[2]/div[1]/div[1]/input")).sendKeys(Keys.ENTER);
+//        driver.findElement(By.name("subject")).sendKeys("Automation Testing");
         Thread.sleep(1000);
         }
 
     @And("Click on Send button")
     public void click_on_send_button() throws Throwable{
-        driver.findElement(By.xpath("//*[@id=\"root\"]/div[2]/div/div/div[2]/div[2]/div/button[1]")).click();
+        emailpage.click_send_button();
+//        driver.findElement(By.xpath("//*[@id=\"root\"]/div[2]/div/div/div[2]/div[2]/div/button[1]")).click();
         Thread.sleep(5000);
     }
 

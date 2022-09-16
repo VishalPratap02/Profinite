@@ -1,8 +1,5 @@
 package com.aimbeyond.dashboard.pages;
 
-import com.aimbeyond.dashboard.step_definitions.StepDefLogin;
-//import com.aimbeyond.dashboard.utilities.Hooks;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,6 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class loginPage {
     WebDriver driver;
+
     @FindBy(name = "username")
     WebElement username_txt;
 
@@ -31,5 +29,4 @@ public class loginPage {
     public void click_login_button(){
         login_btn.click();
     }
-
 }
