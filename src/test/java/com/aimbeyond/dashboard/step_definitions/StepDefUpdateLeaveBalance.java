@@ -43,7 +43,7 @@ public class StepDefUpdateLeaveBalance {
         Thread.sleep(5000);
         driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div/nav/div/div/ul/li[8]/a")).click();
         Thread.sleep(2000);
-        WebElement myAccount = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"navbarText\"]/div/ul/li[8]/ul/li[11]/a")));
+        WebElement myAccount = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"navbarText\"]/div/ul/li[8]/ul/li[12]/a")));
         Thread.sleep(1000);
         myAccount.sendKeys(Keys.ENTER);
         Thread.sleep(1000);

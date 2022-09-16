@@ -194,7 +194,7 @@ public class StepDefProjects {
         Thread.sleep(1000);
         driver.findElement(By.xpath("/html/body/div[4]/div/div/div[2]/div/div/div[1]/div[1]/div/div/div/div[1]/div[1]/div[1]")).click();
         Thread.sleep(1500);
-        driver.findElement(By.id("react-select-17-option-1")).click();
+        driver.findElement(By.id("react-select-17-option-4")).click();
         Thread.sleep(1500);
         // driver.findElement(By.xpath("/html/body/div[4]/div/div/div[2]/div/div/div[1]/div[1]/div/div/div/div[1]/div[1]/div[1]")).sendKeys(Keys.TAB);
 //        driver.findElement(By.xpath("/html/body/div[4]/div/div/div[2]/div/div/div[1]/div[2]/div/div/div/div[1]/div[1]/div[1]")).click();
@@ -205,7 +205,7 @@ public class StepDefProjects {
 //        driver.findElement(By.id("react-select-7-option-0")).click();
 //        Thread.sleep(1000);
         driver.findElement(By.xpath("/html/body/div[4]/div/div/div[2]/div/div/div[1]/div[4]/div/div/div/div[1]/div[1]")).click();
-        driver.findElement(By.id("react-select-20-option-1")).click();
+        driver.findElement(By.id("react-select-20-option-4")).click();
         Thread.sleep(1000);
     }
 

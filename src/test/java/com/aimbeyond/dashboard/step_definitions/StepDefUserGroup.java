@@ -1,5 +1,6 @@
 package com.aimbeyond.dashboard.step_definitions;
 
+import com.github.javafaker.Faker;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -13,6 +14,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class StepDefUserGroup {
 
     public static WebDriver driver;
+    Faker faker;
 
     @Given("^User should have Logged into Dashboard Application$")
     public void user_should_have_logged_In_Dashboard_application() throws Throwable{
@@ -73,7 +75,8 @@ public class StepDefUserGroup {
 
     @And("Provide group name and click on save button")
     public void provide_group_name_and_click_on_save_button() throws Throwable{
-        driver.findElement(By.name("name")).sendKeys("Automation3 Group");
+        faker = new Faker();
+        driver.findElement(By.name("name")).sendKeys(faker.team().name());
         Thread.sleep(5000);
         driver.findElement(By.xpath("/html/body/div[4]/div/div/div[2]/div/div/div[2]/div/button[1]")).click();
     }
@@ -112,7 +115,7 @@ public class StepDefUserGroup {
 
     @And("Provide permission name and click on save button")
     public void provide_permission_name_and_click_on_save_button() throws Throwable{
-        driver.findElement(By.name("name")).sendKeys("Automation permission3");
+        driver.findElement(By.name("name")).sendKeys("Automation Permission");
         Thread.sleep(5000);
         driver.findElement(By.xpath("/html/body/div[4]/div/div/div[2]/div/div/div[2]/div/button[1]")).click();
     }

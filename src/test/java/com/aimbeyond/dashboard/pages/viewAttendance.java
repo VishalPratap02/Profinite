@@ -8,8 +8,6 @@ import org.openqa.selenium.support.PageFactory;
 public class viewAttendance {
     WebDriver driver;
 
-    //*[@id="root"]/div[2]/div/div/div[3]/div[2]/div/div/div[1]
-
     @FindBy(xpath = "//*[@id=\"root\"]/div[2]/div/div/div[2]/div[3]/button[1]")
     WebElement view_btn;
 

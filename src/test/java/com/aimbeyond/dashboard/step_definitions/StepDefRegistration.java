@@ -1,9 +1,11 @@
 package com.aimbeyond.dashboard.step_definitions;
 
+import com.github.javafaker.Faker;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import gherkin.lexer.Th;
 import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -71,12 +73,13 @@ public class StepDefRegistration {
 
     @When("Filling employee details")
     public void filling_employee_details() throws Throwable {
-        driver.findElement(By.id("firstName")).sendKeys("kamal");
-        driver.findElement(By.name("lastName")).sendKeys("Singh");
-        driver.findElement(By.name("primaryContact")).sendKeys("7101213146");
-        driver.findElement(By.name("employeeCode")).sendKeys("183");
+        Faker faker = new Faker();
+        driver.findElement(By.id("firstName")).sendKeys(faker.name().firstName());
+        driver.findElement(By.name("lastName")).sendKeys(faker.name().lastName());
+        driver.findElement(By.name("primaryContact")).sendKeys(faker.number().digits(10));
+        driver.findElement(By.name("employeeCode")).sendKeys(faker.number().digits(3));
         driver.findElement(By.name("source")).sendKeys("Naukri");
-        driver.findElement(By.name("aadharNo")).sendKeys("123134545622");
+        driver.findElement(By.name("aadharNo")).sendKeys(faker.number().digits(12));
         driver.findElement(By.name("panNo")).sendKeys("BKCQR2004K");
         driver.findElement(By.xpath("//*[@id=\"root\"]/div[2]/div/div/div[2]/div/div[2]/div[2]/div/div[7]/div/div/div/div/div[1]/div[1]")).click();
         driver.findElement(By.id("react-select-2-option-0")).click();
@@ -112,6 +115,7 @@ public class StepDefRegistration {
 
     @When("Register new employee")
     public void register_new_employee() throws Throwable {
+        Thread.sleep(1000);
         driver.findElement(By.xpath("//button[@class='btn btn-primary btn-lg']")).click();
         Thread.sleep(1000);
     }

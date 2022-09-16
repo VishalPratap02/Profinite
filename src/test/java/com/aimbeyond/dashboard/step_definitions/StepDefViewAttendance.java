@@ -1,6 +1,8 @@
 package com.aimbeyond.dashboard.step_definitions;
 
 import com.aimbeyond.dashboard.pages.viewAttendance;
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -17,11 +19,31 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 //import com.aimbeyond.dashboard.utilities.Hooks;
 
 import java.io.File;
+import java.util.concurrent.TimeUnit;
 
 public class StepDefViewAttendance {
    public static WebDriver driver;
    viewAttendance vwAttendance;
 //   StepDefLogin stepDefLogin = new StepDefLogin();
+
+//    @Before
+//    public void browser_setup() throws Throwable {
+//        System.setProperty("webdriver.gecko.driver","C:\\Users\\Vishal Pratap Singh\\Downloads\\geckodriver-v0.31.0-win64\\geckodriver.exe");
+//        driver = new FirefoxDriver();
+//        driver.get("http://192.168.0.27:5000/");
+//        driver.manage().window().maximize();
+//        driver.manage().deleteAllCookies();
+//        driver.findElement(By.name("username")).sendKeys("ritu.gupta@aimbeyond.com");
+//        driver.findElement(By.name("password")).sendKeys("12345");
+//        Thread.sleep(100);
+//        driver.findElement(By.xpath("//button[@type='submit']")).click();
+//        Thread.sleep(100);
+//    }
+//
+//    @After
+//    public void teardown() throws Throwable {
+//        driver.quit();
+//    }
 
     @Given("^User have Logged In Dashboard application$")
     public void user_have_logged_in_Dashboard_application() throws Throwable{
@@ -40,6 +62,7 @@ public class StepDefViewAttendance {
         Thread.sleep(100);
         driver.findElement(By.xpath("//button[@type='submit']")).click();
         Thread.sleep(100);
+
     }
 
 //    public StepDefViewAttendance(WebDriver driver){
